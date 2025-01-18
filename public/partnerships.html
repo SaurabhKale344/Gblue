@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+    rel="icon"
+    href="./assets/faviconicon-removebg-preview.png"
+    type="image/png"
+  />
+    <title>Partnerships - Collaborate with Gblue Technology</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-data">
+        <div class="logo">
+          <div class="logoimg"><img src="./assets/new logo .png" /></div>
+          <div class="logopara">Gblue Technology</div>
+        </div>
+        <div class="contact-info">
+          <p>📞 +91-9822988313</p>
+          <p>✉️ gbluetechnology@gmail.com</p>
+        </div>
+      </div>
+    </header>
+
+    <nav>
+      <div class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="nav-links">
+        <a href="/" class="nav-link" data-page="home">Home</a>
+        <a href="/about" class="nav-link" data-page="about">About</a>
+        <a href="/contact" class="nav-link" data-page="contact">Contact</a>
+        <a href="/careers" class="nav-link" data-page="careers">Careers</a>
+        <a href="/blogs" class="nav-link" data-page="blogs">Blog</a>
+      </div>
+    </nav>
+
+    <main class="partner-main">
+      <section class="partner-form-section">
+        <h1 class="partner-form-header">Retailers and Dealers? Contact Us</h1>
+
+        <p class="partner-form-subtext">
+          Looking to join our network? Retailers and dealers, fill out the form
+          below, and we'll contact you shortly to explore how we can work
+          together.
+        </p>
+
+        <div class="partnershipheaderimg">
+          <img src="./assets/strategic-partnerships.png" />
+        </div>
+
+        <!-- Main form starts here -->
+        <form
+          class="partner-form"
+          action="https://api.web3forms.com/submit"
+          method="POST"
+          onsubmit="clearFormInputs(event)"
+        >
+          <input
+            type="hidden"
+            name="access_key"
+            value="4e596a0c-b837-4041-9ff5-fa7f48c7a476"
+          />
+
+          <div class="partner-form-group">
+            <label for="partner-name">Name *</label>
+            <div class="clearable-input">
+              <input
+                type="text"
+                id="partner-name"
+                name="name"
+                placeholder="Your Full Name"
+                required
+              />
+              <span class="clear-button" onclick="clearInput('partner-name')"
+                >×</span
+              >
+            </div>
+          </div>
+
+          <div class="partner-form-group">
+            <label for="partner-phone">Phone Number *</label>
+            <div class="clearable-input">
+            <input
+              type="tel"
+              id="partner-phone"
+              name="phone"
+              placeholder="Your Phone Number"
+              required
+            />
+            <span class="clear-button" onclick="clearInput('partner-phone')"
+                >×</span
+              >
+            </div>
+          </div>
+
+          <div class="partner-form-group">
+            <label for="partner-email">Email</label>
+            <div class="clearable-input">
+            <input
+              type="email"
+              id="partner-email"
+              name="email"
+              placeholder="Your Email Address"
+            />
+            <span class="clear-button" onclick="clearInput('partner-email')"
+                >×</span
+              >
+            </div>
+          </div>
+
+          <div class="partner-form-group">
+            <label for="partner-store-name">Store Name</label>
+            <div class="clearable-input">
+            <input
+              type="text"
+              id="partner-store-name"
+              name="store_name"
+              placeholder="Your Store Name"
+            />
+            <span class="clear-button" onclick="clearInput('partner-store-name')"
+                >×</span
+              >
+            </div>
+          </div>
+
+          <div class="partner-form-group">
+            <label for="partner-store-address">Store Address</label>
+            <div class="clearable-input">
+            <textarea
+              id="partner-store-address"
+              name="store_address"
+              rows="3"
+              placeholder="Your Complete Store Address with PINCODE"
+            ></textarea>
+            
+          </div>
+
+          <div class="partner-form-group">
+            <label for="partner-message">Message</label>
+            <div class="clearable-input">
+            <textarea
+              id="partner-message"
+              name="message"
+              rows="4"
+              placeholder="Your Message"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="partner-form-button">Submit</button>
+        </form>
+        <!-- Main form ends here -->
+      </section>
+    </main>
+
+    <footer class="custom-footer">
+      <div class="footer-container">
+        <!-- Logo and Address -->
+        <div class="footer-section">
+          <img
+            src="./assets/new logo .png"
+            alt="EraBlue Logo"
+            class="footer-logo"
+          />
+          <h3>Gblue Technology</h3>
+          <p>
+            S.No. 31 FL No. C2 805,<br />
+            Belcastel, Keshavnagar, Mundhwa, Pune - 411036<br />
+            Maharashtra, India.
+          </p>
+          <div class="social-icons">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-youtube"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+          </div>
+        </div>
+        <!-- Quick Links -->
+        <div class="footer-section">
+          <h4 class="footer-qlink">Quick Links</h4>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">Company</a></li>
+            <li><a href="#certificate">Certificate</a></li>
+            <li><a href="/product">Product</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="./blogs">Blogs</a></li>
+            <li><a href="./careers">Careers</a></li>
+          </ul>
+        </div>
+        <!-- Products -->
+        <div class="footer-section">
+          <h4 class="footer-qlink">Products</h4>
+          <ul>
+            <li>AdBlue 800</li>
+            <li>AdBlue ® / DEF Plant ER – 2000</li>
+            <li>AdBlue ® / DEF Plant ER – 6000</li>
+            <li>AdBlue ® / DEF Plant ER – 10000</li>
+            <li>AdBlue ® / DEF Plant ER – 12000</li>
+            <li>Electro De-Ironized Plant</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <div class="copyright">
+      <p>&copy; 2025 Gblue Technology pvt Ltd. All rights reserved.</p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
