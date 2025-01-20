@@ -7,7 +7,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-
     <link rel="stylesheet" href="style.css" />
     <link
       rel="icon"
@@ -17,10 +16,13 @@
     <title>Why DEF is Important? - Gblue Technology</title>
   </head>
   <body>
+    <!-- Header Section -->
     <header>
       <div class="header-data">
         <div class="logo">
-          <div class="logoimg"><img src="./assets/new logo .png" /></div>
+          <div class="logoimg">
+            <img src="./assets/new logo .png" alt="Gblue Logo" />
+          </div>
           <div class="logopara">Gblue Technology</div>
         </div>
         <div class="contact-info">
@@ -30,6 +32,7 @@
       </div>
     </header>
 
+    <!-- Navigation Section -->
     <nav>
       <div class="hamburger-menu">
         <span></span>
@@ -45,12 +48,15 @@
       </div>
     </nav>
 
-    <header class="page-header">
-      <h1>Why DEF is Important</h1>
-    </header>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <h1>Why DEF is Important?</h1>
+      <p class="tagline">Cleaner Air with Every Drop</p>
+    </section>
 
-    <section class="content-section2">
-      <div class="content-card2">
+    <!-- Content Section -->
+    <section class="content-section">
+      <div class="content-card1">
         <h2>Emissions</h2>
         <p>
           DEF reduces Nitrogen Oxide (NOx) emissions. Nitrogen oxide is a
@@ -62,7 +68,7 @@
         </p>
       </div>
 
-      <div class="content-card2">
+      <div class="content-card1">
         <h2>Meets Emission Standards</h2>
         <p>
           DEF helps diesel vehicles meet the strict guidelines set by the EPA
@@ -73,55 +79,107 @@
         </p>
       </div>
 
-      <div class="content-card2">
+      <div class="content-card1">
         <h2>Keeps the Vehicle Running Smoothly</h2>
         <p>DEF is essential to keeping a diesel vehicle up and running.</p>
       </div>
+
+      <!-- Table Section -->
+      <section class="table-section">
+        <h2>How Much It Reduces NOx Emissions?</h2>
+        <p>It achieves a remarkable 85 – 95% reduction in NOx emissions.</p>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Vehicle</th>
+              <th>Without DEF</th>
+              <th>With DEF</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Truck</td>
+              <td>860 Gg</td>
+              <td>129 Gg</td>
+            </tr>
+            <tr>
+              <td>Bus</td>
+              <td>680 Gg</td>
+              <td>102 Gg</td>
+            </tr>
+            <tr>
+              <td>Pickup</td>
+              <td>111 Gg</td>
+              <td>22 Gg</td>
+            </tr>
+            <tr>
+              <td>Car</td>
+              <td>17 Gg</td>
+              <td>3 Gg</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Blog Section -->
+      <section class="DEFpg-blog-section">
+        <div class="DEFpg-blog-card">
+          <h2>Looking for More Information?</h2>
+          <p>
+            For more detailed insights and articles about DEF, visit our blog
+            page.
+          </p>
+          <a href="./blogs" class="DEFpg-blog-link">Visit Blog Page</a>
+
+          <!-- Blog Cards -->
+          <div class="DEFpg-blog-cards">
+            <div class="DEFpg-card">
+              <img
+                src="./assets/blog1pic.PNG"
+                alt="Article 1"
+                class="DEFpg-blog-image"
+                loading="lazy"
+              />
+              <div class="DEFpg-card-content">
+                <h3><a href="./BSnorms">Understand BS Norms</a></h3>
+              </div>
+            </div>
+
+            <div class="DEFpg-card">
+              <img
+                src="./assets/blogi.PNG"
+                alt="Article 2"
+                class="DEFpg-blog-image"
+                loading="lazy"
+              />
+              <div class="DEFpg-card-content">
+                <h3><a href="./whatisadblue">What is Adblue</a></h3>
+              </div>
+            </div>
+
+            <div class="DEFpg-card">
+              <img
+                src="./assets/blog3pic.PNG"
+                alt="Article 3"
+                class="DEFpg-blog-image"
+                loading="lazy"
+              />
+              <div class="DEFpg-card-content">
+                <h3><a href="./storeadblue">How to store Adblue</a></h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </section>
 
-    <section class="table-section">
-      <h2>How Much It Reduces NOx Emissions?</h2>
-      <p>It achieves a remarkable 85 – 95% reduction in NOx emissions.</p>
-      <table class="data-table">
-        <thead>
-          <tr>
-            <th>Vehicle</th>
-            <th>Without DEF</th>
-            <th>With DEF</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Truck</td>
-            <td>860 Gg</td>
-            <td>129 Gg</td>
-          </tr>
-          <tr>
-            <td>Bus</td>
-            <td>680 Gg</td>
-            <td>102 Gg</td>
-          </tr>
-          <tr>
-            <td>Pickup</td>
-            <td>111 Gg</td>
-            <td>22 Gg</td>
-          </tr>
-          <tr>
-            <td>Car</td>
-            <td>17 Gg</td>
-            <td>3 Gg</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
+    <!-- Footer Section -->
     <footer class="custom-footer">
       <div class="footer-container">
-        <!-- Logo and Address -->
         <div class="footer-section">
           <img
             src="./assets/new logo .png"
-            alt="EraBlue Logo"
+            alt="Gblue Logo"
             class="footer-logo"
           />
           <h3>Gblue Technology</h3>
@@ -138,7 +196,6 @@
             <a href="#"><i class="fa fa-linkedin"></i></a>
           </div>
         </div>
-        <!-- Quick Links -->
         <div class="footer-section">
           <h4 class="footer-qlink">Quick Links</h4>
           <ul>
@@ -151,7 +208,6 @@
             <li><a href="./careers">Careers</a></li>
           </ul>
         </div>
-        <!-- Products -->
         <div class="footer-section">
           <h4 class="footer-qlink">Products</h4>
           <ul>
@@ -165,9 +221,8 @@
         </div>
       </div>
     </footer>
-
     <div class="copyright">
-      <p>&copy; 2025 Gblue Technology pvt Ltd. All rights reserved.</p>
+      <p>&copy; 2025 Gblue Technology Pvt. Ltd. All rights reserved.</p>
     </div>
 
     <script src="script.js"></script>
