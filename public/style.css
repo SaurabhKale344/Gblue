@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -475,11 +475,6 @@ nav a:hover {
 
 /*  */
 
-.services {
-  text-align: center;
-  font-size: 2rem;
-}
-
 /*  */
 
 .image-container img {
@@ -596,21 +591,65 @@ section {
 /* middlepart css responsive  ends*/
 
 /* services css */
+
 .services {
-  font-size: 1.5rem;
-  margin-left: 2rem;
+  text-align: center;
+  font-size: 2rem;
+  margin: 2rem 0;
+  color: #0078d4;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+  position: relative;
 }
+
+h4.services {
+  text-align: center;
+  font-size: 2rem;
+  margin: 2rem 0;
+  color: #0078d4;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+  position: relative;
+}
+
+h4.services::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 3px;
+  background: #0078d4;
+  margin: 0.5rem auto 0;
+  border-radius: 3px;
+}
+
 .cards {
   display: flex;
   justify-content: space-around;
   gap: 20px;
   margin-bottom: 5rem;
+  background-color: white;
+}
+.card-content h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4rem;
+  color: #0078d4;
+  margin-bottom: 0.8rem;
+}
+
+.card-content p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
 }
 
 .card {
   background: white;
   border: 1px solid #ddd;
-  border-radius: 8px;
+  border-radius: 15px;
   width: 22%;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -619,8 +658,8 @@ section {
 }
 
 .card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  /* transform: translateY(-10px); */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
 .card img {
@@ -633,6 +672,23 @@ section {
 .card-content {
   padding: 15px;
   text-align: center;
+}
+
+.card-content a {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #518bba;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.card-content a:hover {
+  background-color: #0056a1;
+  transform: scale(1.05);
 }
 
 /* services css ends*/
@@ -858,15 +914,10 @@ section {
 
 /* Contact us page */
 
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #ffffff;
-}
-
 .contact-section {
   padding: 50px;
+  margin-bottom: 7rem;
+  background-color: #ffffff;
 }
 
 .contact-header {
@@ -897,7 +948,7 @@ body {
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
   width: 100%;
   max-width: 400px;
 }
@@ -2106,8 +2157,9 @@ a:hover {
 /* Section Styles */
 .blog-section {
   padding: 40px 20px;
-  background-color: #f9f9f9;
+  background-color: #ffffff;
   text-align: center;
+  margin-bottom: 7rem;
 }
 
 .section-title {
