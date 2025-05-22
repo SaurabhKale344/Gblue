@@ -40,6 +40,14 @@ app.get("/careers", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "career.html"));
 });
 
+app.get("/deleteaccount", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "deleteaccount.html"));
+});
+
+app.get("/privacypolicy", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "privacypolicy.html"));
+});
+
 app.get("/blogs", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "blogs.html"));
 });
