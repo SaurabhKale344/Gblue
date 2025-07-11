@@ -1,7 +1,7 @@
 // script.js
 
 // Import Three.js explicitly for module scope
-import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.148.0/build/three.module.js';
+import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.165.0/build/three.module.js';
 // GSAP is loaded globally via CDN, so access it via window.gsap
 
 // --- Global Variables for 3D Scene ---
