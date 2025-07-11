@@ -3,212 +3,198 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Partner with Gblue Technology</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
 
     <link rel="stylesheet" href="style.css" />
-    <link
-    rel="icon"
-    href="./assets/faviconicon-removebg-preview.png"
-    type="image/png"
-  />
-    <title>Partnerships - Collaborate with Gblue Technology</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r148/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    
+    <script
+      type="text/javascript"
+      src="https://d3mkw6s8thqya7.cloudfront.net/integration-plugin.js"
+      id="aisensy-wa-widget"
+      widget-id="aaahgm"
+    >
+    </script>
+   
   </head>
   <body>
     <header>
-      <div class="header-data">
-        <div class="logo">
-          <div class="logoimg"><img src="./assets/new logo .png" /></div>
-          <div class="logopara">Gblue Technology</div>
-        </div>
-        <div class="contact-info">
-          <p>📞 +91-9822988313</p>
-          <p>✉️ gbluetechnology@gmail.com</p>
-        </div>
+      <div class="logo">
+        <img
+          src="./assets/gblue logo 512x512.png"
+          alt="logo"
+        />
+        <div class="logopara">Gblue Technology</div>
+      </div>
+      <div class="contact-info-desktop">
+        <p>📞 +91-9403892430</p>
+        <p>✉️ gbluetechnology@gmail.com</p>
       </div>
     </header>
 
-    <nav>
+    <div class="floating-navbar-container">
+      <nav>
+        <div class="nav-links">
+          <a href="/" class="nav-link">Home</a>
+          <a href="/about" class="nav-link">About</a>
+          <a href="/contact" class="nav-link">Contact</a>
+          <a href="/careers" class="nav-link">Careers</a>
+          <a href="/blogs" class="nav-link">Blog</a>
+        </div>
+        <div class="contact-info-mobile">
+          <p>📞 +91-9403892430</p>
+          <p>✉️ gbluetechnology@gmail.com</p>
+        </div>
+      </nav>
       <div class="hamburger-menu">
         <span></span>
         <span></span>
         <span></span>
       </div>
-      <div class="nav-links">
-        <a href="/" class="nav-link" data-page="home">Home</a>
-        <a href="/about" class="nav-link" data-page="about">About</a>
-        <a href="/contact" class="nav-link" data-page="contact">Contact</a>
-        <a href="/careers" class="nav-link" data-page="careers">Careers</a>
-        <a href="/blogs" class="nav-link" data-page="blogs">Blog</a>
-      </div>
-    </nav>
+    </div>
 
+
+
+    
     <main class="partner-main">
-      <section class="partner-form-section">
-        <h1 class="partner-form-header">Retailers and Dealers? Contact Us</h1>
-
-        <p class="partner-form-subtext">
-          Looking to join our network? Retailers and dealers, fill out the form
-          below, and we'll contact you shortly to explore how we can work
-          together.
-        </p>
-
-        <div class="partnershipheaderimg">
-          <img src="./assets/strategic-partnerships.png" />
-        </div>
-
-        <!-- Main form starts here -->
-        <form
-          class="partner-form"
-          action="https://api.web3forms.com/submit"
-          method="POST"
-          onsubmit="clearFormInputs(event)"
-        >
-          <input
-            type="hidden"
-            name="access_key"
-            value="ae114a90-4f4e-4ca0-b20d-a4cd1cc00453"
-          />
-
-          <div class="partner-form-group">
-            <label for="partner-name">Name *</label>
-            <div class="clearable-input">
-              <input
-                type="text"
-                id="partner-name"
-                name="name"
-                placeholder="Your Full Name"
-                required
-              />
-              <span class="clear-button" onclick="clearInput('partner-name')"
-                >×</span
-              >
+        <section class="partner-section-container">
+            <div class="partner-intro-column">
+                <h1 class="partner-header">Join Our Network Today!</h1>
+                <p class="partner-subtext">
+                    Become a valued partner in our growing network of retailers and dealers. Fill out the form
+                    to explore exclusive opportunities, exceptional support, and mutual growth.
+                    We're excited to hear from you and build a lasting relationship.
+                </p>
+                <div class="partner-image-wrapper">
+                    <img src="./assets/strategic-partnerships.png" alt="Strategic Partnerships">
+                </div>
             </div>
-          </div>
 
-          <div class="partner-form-group">
-            <label for="partner-phone">Phone Number *</label>
-            <div class="clearable-input">
-            <input
-              type="tel"
-              id="partner-phone"
-              name="phone"
-              placeholder="Your Phone Number"
-              required
-            />
-            <span class="clear-button" onclick="clearInput('partner-phone')"
-                >×</span
-              >
-            </div>
-          </div>
+            <div class="partner-form-column">
+                <h2 class="form-title">Contact Us for Partnership</h2>
+                <form class="partner-form" action="https://api.web3forms.com/submit" method="POST" onsubmit="clearFormInputs(event)">
+                    <input type="hidden" name="access_key" value="ae114a90-4f4e-4ca0-b20d-a4cd1cc00453" />
 
-          <div class="partner-form-group">
-            <label for="partner-email">Email</label>
-            <div class="clearable-input">
-            <input
-              type="email"
-              id="partner-email"
-              name="email"
-              placeholder="Your Email Address"
-            />
-            <span class="clear-button" onclick="clearInput('partner-email')"
-                >×</span
-              >
-            </div>
-          </div>
+                    <div class="form-group">
+                        <label for="partner-name">Name <span class="required">*</span></label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-user input-icon"></i>
+                            <input type="text" id="partner-name" name="name" placeholder="Your Full Name" required />
+                            <span class="clear-input" onclick="clearInput('partner-name')">×</span>
+                        </div>
+                    </div>
 
-          <div class="partner-form-group">
-            <label for="partner-store-name">Store Name</label>
-            <div class="clearable-input">
-            <input
-              type="text"
-              id="partner-store-name"
-              name="store_name"
-              placeholder="Your Store Name"
-            />
-            <span class="clear-button" onclick="clearInput('partner-store-name')"
-                >×</span
-              >
-            </div>
-          </div>
+                    <div class="form-group">
+                        <label for="partner-phone">Phone Number <span class="required">*</span></label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-phone input-icon"></i>
+                            <input type="tel" id="partner-phone" name="phone" placeholder="Your Phone Number" required />
+                            <span class="clear-input" onclick="clearInput('partner-phone')">×</span>
+                        </div>
+                    </div>
 
-          <div class="partner-form-group">
-            <label for="partner-store-address">Store Address</label>
-            <div class="clearable-input">
-            <textarea
-              id="partner-store-address"
-              name="store_address"
-              rows="3"
-              placeholder="Your Complete Store Address with PINCODE"
-            ></textarea>
-            
-          </div>
+                    <div class="form-group">
+                        <label for="partner-email">Email</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-envelope input-icon"></i>
+                            <input type="email" id="partner-email" name="email" placeholder="Your Email Address" />
+                            <span class="clear-input" onclick="clearInput('partner-email')">×</span>
+                        </div>
+                    </div>
 
-          <div class="partner-form-group">
-            <label for="partner-message">Message</label>
-            <div class="clearable-input">
-            <textarea
-              id="partner-message"
-              name="message"
-              rows="4"
-              placeholder="Your Message"
-            ></textarea>
-          </div>
+                    <div class="form-group">
+                        <label for="partner-store-name">Company / Store Name</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-building input-icon"></i>
+                            <input type="text" id="partner-store-name" name="store_name" placeholder="Your Company or Store Name" />
+                            <span class="clear-input" onclick="clearInput('partner-store-name')">×</span>
+                        </div>
+                    </div>
 
-          <button type="submit" class="partner-form-button">Submit</button>
-        </form>
-        <!-- Main form ends here -->
-      </section>
+                    <div class="form-group full-width">
+                        <label for="partner-store-address">Company / Store Address</label>
+                        <div class="input-with-icon-textarea">
+                            <i class="fas fa-map-marker-alt input-icon-textarea"></i>
+                            <textarea id="partner-store-address" name="store_address" rows="3" placeholder="Your Complete Company/Store Address with PINCODE"></textarea>
+                            <span class="clear-input clear-input-textarea" onclick="clearInput('partner-store-address')">×</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="partner-message">Your Message</label>
+                        <div class="input-with-icon-textarea">
+                            <i class="fas fa-comment-dots input-icon-textarea"></i>
+                            <textarea id="partner-message" name="message" rows="4" placeholder="Tell us more about your interest..."></textarea>
+                            <span class="clear-input clear-input-textarea" onclick="clearInput('partner-message')">×</span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-button">Send Inquiry</button>
+                </form>
+                </div>
+        </section>
     </main>
 
-    <footer class="custom-footer">
+
+
+     <footer class="custom-footer">
       <div class="footer-container">
-        <!-- Logo and Address -->
         <div class="footer-section">
           <img
-            src="./assets/new logo .png"
-            alt="EraBlue Logo"
+            src="./assets/gblue logo bg removed.png"
             class="footer-logo"
+            alt="Logo"
           />
-          <h3>Gblue Technology</h3>
+          <h3>Gblue Technology Pvt Ltd</h3>
           <p>
-            S.No. 31 FL No. C2 805,<br />
-            Belcastel, Keshavnagar, Mundhwa, Pune - 411036<br />
-            Maharashtra, India.
+            S.No. 31 FL No. C2 805,<br />Belcastel, Keshavnagar, Mundhwa, Pune -
+            411036<br />Maharashtra, India.
           </p>
           <div class="social-icons">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-instagram"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-youtube"></i></a>
-            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
           </div>
         </div>
-        <!-- Quick Links -->
+
         <div class="footer-section">
-          <h4 class="footer-qlink">Quick Links</h4>
+          <h4>Quick Links</h4>
           <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/about">Company</a></li>
-            <li><a href="#certificate">Certificate</a></li>
-            <li><a href="/product">Product</a></li>
+            <li><a href="#">Certificate</a></li>
+            <li><a href="#">Product</a></li>
             <li><a href="/contact">Contact</a></li>
             <li><a href="./blogs">Blogs</a></li>
             <li><a href="./careers">Careers</a></li>
+            <li><a href="./deleteaccount">Delete Account</a></li>
+            <li><a href="./privacypolicy">Privacy Policy</a></li>
           </ul>
         </div>
-        <!-- Products -->
+
         <div class="footer-section">
-          <h4 class="footer-qlink">Products</h4>
+          <h4>Products</h4>
           <ul>
-            <li>AdBlue 800</li>
-            <li>AdBlue ® / DEF Plant ER – 2000</li>
-            <li>AdBlue ® / DEF Plant ER – 6000</li>
-            <li>AdBlue ® / DEF Plant ER – 10000</li>
-            <li>AdBlue ® / DEF Plant ER – 12000</li>
-            <li>Electro De-Ironized Plant</li>
+            <li>AdBlue bucket in 20 litres</li>
+            <li>AdBlue bucket in 10 litres</li>
+            <li>AdBlue bucket in 5 litres</li>
           </ul>
         </div>
       </div>
@@ -218,6 +204,29 @@
       <p>&copy; 2025 Gblue Technology pvt Ltd. All rights reserved.</p>
     </div>
 
-    <script src="script.js"></script>
+
+    <script type="module" src="script.js"></script>
+    <script>
+        function clearInput(id) {
+    document.getElementById(id).value = '';
+}
+
+function clearFormInputs(event) {
+    // This function is currently called on form submit.
+    // If you want to prevent the form from actually submitting when this runs,
+    // and just clear the fields, uncomment event.preventDefault();
+    // However, if you are sending the form data to Web3Forms, you typically
+    // want the submission to happen first, and then clear the form
+    // (perhaps in a success callback from Web3Forms, if they provide one).
+
+    const form = event.target;
+    form.querySelectorAll('input[type="text"], input[type="tel"], input[type="email"], textarea').forEach(input => {
+        input.value = '';
+    });
+    // If you need the form to submit to web3forms, keep the line below commented.
+    // If you only want to clear fields without submitting, uncomment it.
+    // event.preventDefault();
+}
+    </script>
   </body>
 </html>

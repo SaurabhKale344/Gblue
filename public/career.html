@@ -3,199 +3,213 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Careers at Gblue Technology</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
 
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="icon"
-      href="./assets/faviconicon-removebg-preview.png"
-      type="image/png"
-    />
-    <title>Careers - Join Gblue Technology</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r148/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    
+    <script
+      type="text/javascript"
+      src="https://d3mkw6s8thqya7.cloudfront.net/integration-plugin.js"
+      id="aisensy-wa-widget"
+      widget-id="aaahgm"
+    >
+    </script>
+   
   </head>
   <body>
     <header>
-      <div class="header-data">
-        <div class="logo">
-          <div class="logoimg"><img src="./assets/new logo .png" /></div>
-          <div class="logopara">Gblue Technology</div>
-        </div>
-        <div class="contact-info">
-          <p>📞 +91-9822988313</p>
-          <p>✉️ gbluetechnology@gmail.com</p>
-        </div>
+      <div class="logo">
+        <img
+          src="./assets/gblue logo 512x512.png"
+          alt="logo"
+        />
+        <div class="logopara">Gblue Technology</div>
+      </div>
+      <div class="contact-info-desktop">
+        <p>📞 +91-9403892430</p>
+        <p>✉️ gbluetechnology@gmail.com</p>
       </div>
     </header>
 
-    <nav>
+    <div class="floating-navbar-container">
+      <nav>
+        <div class="nav-links">
+          <a href="/" class="nav-link">Home</a>
+          <a href="/about" class="nav-link">About</a>
+          <a href="/contact" class="nav-link">Contact</a>
+          <a href="/careers" class="nav-link active">Careers</a>
+          <a href="/blogs" class="nav-link">Blog</a>
+        </div>
+        <div class="contact-info-mobile">
+          <p>📞 +91-9403892430</p>
+          <p>✉️ gbluetechnology@gmail.com</p>
+        </div>
+      </nav>
       <div class="hamburger-menu">
         <span></span>
         <span></span>
         <span></span>
       </div>
-      <div class="nav-links">
-        <a href="/" class="nav-link" data-page="home">Home</a>
-        <a href="/about" class="nav-link" data-page="about">About</a>
-        <a href="/contact" class="nav-link" data-page="contact">Contact</a>
-        <a href="/careers" class="nav-link" data-page="careers">Careers</a>
-        <a href="/blogs" class="nav-link" data-page="blogs">Blog</a>
-      </div>
-    </nav>
+    </div>
 
-    <main class="career-main">
-      <!-- Hero Section -->
-      <section class="career-hero">
-        <h1 class="career-hero-title">Join Our Team</h1>
-        <p class="career-hero-subtitle">
-          Explore exciting opportunities and become a part of our growing
-          family.
-        </p>
-      </section>
 
-      <!-- Open Positions Section -->
-      <section class="career-open-positions">
-        <h2 class="career-section-title">Open Positions</h2>
-        <div class="career-positions-list">
-          <div class="career-position-card">
-            <h3 class="career-position-title">Marketing Head</h3>
-            <img src="./assets/manager.png" alt="Card 4" loading="lazy" />
-            <p class="career-position-description">
-              We are seeking a seasoned professional, preferably retired, with
-              extensive experience and a strong network in the automotive and
-              industrial sectors across Maharashtra. Join us to lead and drive
-              impactful growth with your expertise!
-            </p>
+    <main class="gblue-careers-v1-main">
+      <section class="gblue-careers-v1-hero-section">
+          <div class="gblue-careers-v1-hero-content">
+              <h1 class="gblue-careers-v1-hero-title">Join Our Team</h1>
+              <p class="gblue-careers-v1-hero-subtitle">
+                  Explore exciting opportunities and become a part of our growing family.
+              </p>
           </div>
-          <div class="career-position-card">
-            <h3 class="career-position-title">Marketing Representives</h3>
-            <img src="./assets/affiliate.png" alt="Card 4" loading="lazy" />
-            <p class="career-position-description">
-              We are seeking enthusiastic individuals, preferably freshers with
-              an MBA background and some knowledge of the automobile industry.
-              Join us to explore exciting opportunities and grow with our
-              dynamic team.
-            </p>
+      </section>
+
+      <section class="gblue-careers-v1-open-positions-section">
+          <h2 class="gblue-careers-v1-section-title">Open Positions</h2>
+          <div class="gblue-careers-v1-positions-grid">
+              <div class="gblue-careers-v1-position-card">
+                  <h3 class="gblue-careers-v1-position-title">Marketing Head</h3>
+                  <img src="./assets/manager.png" alt="Marketing Head icon" loading="lazy" class="gblue-careers-v1-position-image" />
+                  <p class="gblue-careers-v1-position-description">
+                      We are seeking a seasoned professional, preferably retired, with extensive experience and a strong network in the automotive and industrial sectors across Maharashtra. Join us to lead and drive impactful growth with your expertise!
+                  </p>
+              </div>
+              <div class="gblue-careers-v1-position-card">
+                  <h3 class="gblue-careers-v1-position-title">Marketing Representatives</h3>
+                  <img src="./assets/affiliate.png" alt="Marketing Representatives icon" loading="lazy" class="gblue-careers-v1-position-image" />
+                  <p class="gblue-careers-v1-position-description">
+                      We are seeking enthusiastic individuals, preferably freshers with an MBA background and some knowledge of the automobile industry. Join us to explore exciting opportunities and grow with our dynamic team.
+                  </p>
+              </div>
+              <div class="gblue-careers-v1-position-card">
+                  <h3 class="gblue-careers-v1-position-title">Accountant</h3>
+                  <img src="./assets/accountant.png" alt="IT Support icon" loading="lazy" class="gblue-careers-v1-position-image" />
+                  <p class="gblue-careers-v1-position-description">
+                      We are looking for detail-oriented individuals with a B.Com or M.Com background and some hands-on experience in accounting. Candidates should have working knowledge of bookkeeping, GST, and Tally or similar software. Join our growing team to contribute to smooth financial operations in a dynamic work environment.
+                  </p>
+              </div>
           </div>
-          <div class="career-position-card">
-            <h3 class="career-position-title">IT Support</h3>
-            <img src="./assets/tech-support.png" alt="Card 4" loading="lazy" />
-            <p class="career-position-description">
-              Join a team that values expertise! We’re looking for IT Support
-              professionals to help us achieve technological excellence and
-              seamless operations.
-            </p>
-          </div>
-        </div>
       </section>
 
-      <section class="career-contact">
-        <h2 class="career-section-title">Get In Touch</h2>
-        <p class="career-contact-info">
-          Email your resume with the subject line stating which role you are
-          applying for.<br /><br />
-          Send your resume to:
-          <a href="mailto:gbluetechnology@gmail.com" class="career-email"
-            >gbluetechnology@gmail.com</a
-          >.<br /><br />
-          We carefully review each and every resume we receive, and look forward
-          considering your application!
-        </p>
+      <section class="gblue-careers-v1-why-us-section">
+          <h2 class="gblue-careers-v1-section-title">Why Work With Us?</h2>
+          <ul class="gblue-careers-v1-benefits-accordion">
+              <li class="gblue-careers-v1-benefit-item">
+                  <div class="gblue-careers-v1-benefit-header" onclick="gblueCareersToggleDetail(this)">
+                      <span class="gblue-careers-v1-benefit-title">Innovative work environment</span>
+                      <button class="gblue-careers-v1-toggle-button">
+                          <i class="fa-solid fa-chevron-down"></i>
+                      </button>
+                  </div>
+                  <div class="gblue-careers-v1-benefit-detail">
+                      <p>We foster creativity, collaboration, and diversity to ensure everyone thrives.Work in a space that encourages creativity and innovation, where your ideas are valued and nurtured.</p>
+                  </div>
+              </li>
+              <li class="gblue-careers-v1-benefit-item">
+                  <div class="gblue-careers-v1-benefit-header" onclick="gblueCareersToggleDetail(this)">
+                      <span class="gblue-careers-v1-benefit-title">Cross-Functional Collaboration</span>
+                      <button class="gblue-careers-v1-toggle-button">
+                          <i class="fa-solid fa-chevron-down"></i>
+                      </button>
+                  </div>
+                  <div class="gblue-careers-v1-benefit-detail">
+                      <p>Collaborate with various departments—design, engineering, supply chain, and operations—to drive efficiency, streamline workflows, and achieve excellence.</p>
+                  </div>
+              </li>
+              <li class="gblue-careers-v1-benefit-item">
+                  <div class="gblue-careers-v1-benefit-header" onclick="gblueCareersToggleDetail(this)">
+                      <span class="gblue-careers-v1-benefit-title">Diverse and Inclusive Workforce</span>
+                      <button class="gblue-careers-v1-toggle-button">
+                          <i class="fa-solid fa-chevron-down"></i>
+                      </button>
+                  </div>
+                  <div class="gblue-careers-v1-benefit-detail">
+                      <p>Join a team that values diversity and fosters an inclusive environment where different perspectives and backgrounds are respected and celebrated.</p>
+                  </div>
+              </li>
+              <li class="gblue-careers-v1-benefit-item">
+                  <div class="gblue-careers-v1-benefit-header" onclick="gblueCareersToggleDetail(this)">
+                      <span class="gblue-careers-v1-benefit-title">Direct Impact on Business Success</span>
+                      <button class="gblue-careers-v1-toggle-button">
+                          <i class="fa-solid fa-chevron-down"></i>
+                      </button>
+                  </div>
+                  <div class="gblue-careers-v1-benefit-detail">
+                      <p>Your work will have a direct impact on the company’s success, as every role is crucial to the efficiency and growth of our Company.</p>
+                  </div>
+              </li>
+          </ul>
       </section>
 
-      <!-- Why Work With Us Section -->
-      <section class="career-why-us">
-        <h2 class="career-section-title">Why Work With Us?</h2>
-        <ul class="career-benefits-list">
-          <li class="career-benefit">
-            <span>Innovative work environment</span>
-            <button class="toggle-btn" onclick="toggleDetail(this)">▼</button>
-            <div class="career-detail" style="display: none">
-              We foster creativity, collaboration, and diversity to ensure
-              everyone thrives.Work in a space that encourages creativity and
-              innovation, where your ideas are valued and nurtured.
-            </div>
-          </li>
-          <li class="career-benefit">
-            <span>Cross-Functional Collaboration</span>
-            <button class="toggle-btn" onclick="toggleDetail(this)">▼</button>
-            <div class="career-detail" style="display: none">
-              Collaborate with various departments—design, engineering, supply
-              chain, and operations—to drive efficiency, streamline workflows,
-              and achieve excellence.
-            </div>
-          </li>
-          <li class="career-benefit">
-            <span>Diverse and Inclusive Workforce</span>
-            <button class="toggle-btn" onclick="toggleDetail(this)">▼</button>
-            <div class="career-detail" style="display: none">
-              Join a team that values diversity and fosters an inclusive
-              environment where different perspectives and backgrounds are
-              respected and celebrated.
-            </div>
-          </li>
-          <li class="career-benefit">
-            <span>Direct Impact on Business Success</span>
-            <button class="toggle-btn" onclick="toggleDetail(this)">▼</button>
-            <div class="career-detail" style="display: none">
-              Your work will have a direct impact on the company’s success, as
-              every role is crucial to the efficiency and growth of our Company.
-            </div>
-          </li>
-        </ul>
+      <section class="gblue-careers-v1-contact-section">
+          <h2 class="gblue-careers-v1-section-title">Get In Touch</h2>
+          <p class="gblue-careers-v1-contact-text">
+              Email your resume with the subject line stating which role you are applying for.<br /><br />
+              Send your resume to:
+              <a href="mailto:gbluetechnology@gmail.com" class="gblue-careers-v1-contact-email">gbluetechnology@gmail.com</a>.<br /><br />
+              We carefully review each and every resume we receive, and look forward considering your application!
+          </p>
       </section>
-
-      <!-- Contact Section -->
     </main>
 
-    <footer class="custom-footer">
+     <footer class="custom-footer">
       <div class="footer-container">
-        <!-- Logo and Address -->
         <div class="footer-section">
           <img
-            src="./assets/new logo .png"
-            alt="EraBlue Logo"
+            src="./assets/gblue logo bg removed.png"
             class="footer-logo"
+            alt="Logo"
           />
-          <h3>Gblue Technology</h3>
+          <h3>Gblue Technology Pvt Ltd</h3>
           <p>
-            S.No. 31 FL No. C2 805,<br />
-            Belcastel, Keshavnagar, Mundhwa, Pune - 411036<br />
-            Maharashtra, India.
+            S.No. 31 FL No. C2 805,<br />Belcastel, Keshavnagar, Mundhwa, Pune -
+            411036<br />Maharashtra, India.
           </p>
           <div class="social-icons">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-instagram"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-youtube"></i></a>
-            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
           </div>
         </div>
-        <!-- Quick Links -->
+
         <div class="footer-section">
-          <h4 class="footer-qlink">Quick Links</h4>
+          <h4>Quick Links</h4>
           <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/about">Company</a></li>
-            <li><a href="#certificate">Certificate</a></li>
-            <li><a href="/product">Product</a></li>
+            <li><a href="#">Certificate</a></li>
+            <li><a href="#">Product</a></li>
             <li><a href="/contact">Contact</a></li>
             <li><a href="./blogs">Blogs</a></li>
             <li><a href="./careers">Careers</a></li>
+            <li><a href="./deleteaccount">Delete Account</a></li>
+            <li><a href="./privacypolicy">Privacy Policy</a></li>
           </ul>
         </div>
-        <!-- Products -->
+
         <div class="footer-section">
-          <h4 class="footer-qlink">Products</h4>
+          <h4>Products</h4>
           <ul>
-            <li>AdBlue 800</li>
-            <li>AdBlue ® / DEF Plant ER – 2000</li>
-            <li>AdBlue ® / DEF Plant ER – 6000</li>
-            <li>AdBlue ® / DEF Plant ER – 10000</li>
-            <li>AdBlue ® / DEF Plant ER – 12000</li>
-            <li>Electro De-Ironized Plant</li>
+            <li>AdBlue bucket in 20 litres</li>
+            <li>AdBlue bucket in 10 litres</li>
+            <li>AdBlue bucket in 5 litres</li>
           </ul>
         </div>
       </div>
@@ -205,6 +219,6 @@
       <p>&copy; 2025 Gblue Technology pvt Ltd. All rights reserved.</p>
     </div>
 
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
   </body>
 </html>

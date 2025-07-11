@@ -3,153 +3,201 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Gblue Technology</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
 
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="icon"
-      href="./assets/faviconicon-removebg-preview.png"
-      type="image/png"
-    />
-    <title>Contact Us - Gblue Technology</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r148/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    
+    <script
+      type="text/javascript"
+      src="https://d3mkw6s8thqya7.cloudfront.net/integration-plugin.js"
+      id="aisensy-wa-widget"
+      widget-id="aaahgm"
+    >
+    </script>
+   
   </head>
   <body>
     <header>
-      <div class="header-data">
-        <div class="logo">
-          <div class="logoimg"><img src="./assets/new logo .png" /></div>
-          <div class="logopara">Gblue Technology</div>
-        </div>
-        <div class="contact-info">
-          <p>📞 +91-9822988313</p>
-          <p>✉️ gbluetechnology@gmail.com</p>
-        </div>
+      <div class="logo">
+        <img
+          src="./assets/gblue logo 512x512.png"
+          alt="logo"
+        />
+        <div class="logopara">Gblue Technology</div>
+      </div>
+      <div class="contact-info-desktop">
+        <p>📞 +91-9403892430</p>
+        <p>✉️ gbluetechnology@gmail.com</p>
       </div>
     </header>
 
-    <nav>
+    <div class="floating-navbar-container">
+      <nav>
+        <div class="nav-links">
+          <a href="/" class="nav-link ">Home</a>
+          <a href="/about" class="nav-link">About</a>
+          <a href="/contact" class="nav-link active">Contact</a>
+          <a href="/careers" class="nav-link">Careers</a>
+          <a href="/blogs" class="nav-link">Blog</a>
+        </div>
+        <div class="contact-info-mobile">
+          <p>📞 +91-9403892430</p>
+          <p>✉️ gbluetechnology@gmail.com</p>
+        </div>
+      </nav>
       <div class="hamburger-menu">
         <span></span>
         <span></span>
         <span></span>
       </div>
-      <div class="nav-links">
-        <a href="/" class="nav-link" data-page="home">Home</a>
-        <a href="/about" class="nav-link" data-page="about">About</a>
-        <a href="/contact" class="nav-link" data-page="contact">Contact</a>
-        <a href="/careers" class="nav-link" data-page="careers">Careers</a>
-        <a href="/blogs" class="nav-link" data-page="blogs">Blog</a>
-      </div>
-    </nav>
+    </div>
 
-    <section class="contact-section">
-      <div class="contact-header">
-        <h1>Connect With Us</h1>
-        <p>
-          We would love to respond to your queries and help you succeed.<br />Feel
-          free to get in touch with us.
-        </p>
-      </div>
-      <div class="contact-container">
-        <div class="form-container">
-          <h2>Send your request</h2>
-          <form action="https://api.web3forms.com/submit" method="POST">
-            <div class="form-row">
-              <input
-                type="hidden"
-                name="access_key"
-                value="ae114a90-4f4e-4ca0-b20d-a4cd1cc00453"
-              />
-              <input type="text" name="name" placeholder="Name*" required />
-              <input type="text" name="phone" placeholder="Phone*" required />
-            </div>
-            <div class="form-row">
-              <input type="email" name="email" placeholder="Email" />
-              <input type="text" name="msg" placeholder="Subject" />
-            </div>
-            <textarea placeholder="Your Message"></textarea>
-            <button type="submit">SEND</button>
-          </form>
+
+    <section class="gblue-contact-v5-section">
+    <div class="gblue-contact-v5-container">
+
+        <div class="gblue-contact-v5-form-area">
+            <h2 class="gblue-contact-v5-heading">Send Us a Message</h2>
+            <p class="gblue-contact-v5-subtext">Fill out the form below and we'll get back to you shortly.</p>
+
+            <form action="https://api.web3forms.com/submit" method="POST" class="gblue-contact-v5-form">
+                <input type="hidden" name="access_key" value="ae114a90-4f4e-4ca0-b20d-a4cd1cc00453" />
+
+                <div class="gblue-contact-v5-form-group">
+                    <label for="gblueContactV5Name" class="gblue-contact-v5-label">Name *</label>
+                    <input type="text" name="name" id="gblueContactV5Name" required class="gblue-contact-v5-input" placeholder="Your Name" />
+                </div>
+                  <div class="gblue-contact-v5-form-group">
+                    <label for="gblueContactV5Phone" class="gblue-contact-v5-label">Phone *</label>
+                    <input type="tel" name="phone" id="gblueContactV5Phone" required class="gblue-contact-v5-input" placeholder="+91 12345 67890" />
+                </div>
+
+                <div class="gblue-contact-v5-form-group">
+                    <label for="gblueContactV5Email" class="gblue-contact-v5-label">Email</label>
+                    <input type="email" name="email" id="gblueContactV5Email" class="gblue-contact-v5-input" placeholder="your.email@example.com" />
+                </div>
+
+              
+
+                <div class="gblue-contact-v5-form-group">
+                    <label for="gblueContactV5Message" class="gblue-contact-v5-label">Your Message</label>
+                    <textarea name="message" id="gblueContactV5Message" rows="6" class="gblue-contact-v5-textarea" placeholder="Type your message here..."></textarea>
+                </div>
+
+                <button type="submit" class="gblue-contact-v5-submit-button">SEND MESSAGE</button>
+            </form>
         </div>
-        <div class="info-container">
-          <h2>Reach Us</h2>
-          <div class="info-item">
-            <p>
-              <strong>Email:</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              gbluetechnology@gmail.com
-            </p>
-          </div>
-          <div class="info-item">
-            <p>
-              <strong>Phone:</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+91
-              9822988313
-            </p>
-          </div>
-          <div class="info-item">
-            <p>
-              <strong>Address:</strong> &nbsp;&nbsp;&nbsp;&nbsp;S.No. 31 FL No.
-              C2 805,<br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              Belcastel, Keshavnagar, Mundhwa,<br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pune
-              - 411036, Maharashtra, India.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+
+        <div class="gblue-contact-v5-info-area">
+            <h2 class="gblue-contact-v5-heading">Our Information</h2>
+            <p class="gblue-contact-v5-subtext">Find us or give us a call directly.</p>
+
+            <div class="gblue-contact-v5-details">
+                <div class="gblue-contact-v5-detail-item">
+                    <i class="fa fa-envelope gblue-contact-v5-detail-icon"></i>
+                    <div class="gblue-contact-v5-detail-text">
+                        <span class="gblue-contact-v5-detail-label">Email:</span>
+                        <a href="mailto:gbluetechnology@gmail.com" class="gblue-contact-v5-detail-link">gbluetechnology@gmail.com</a>
+                    </div>
+                </div>
+                <div class="gblue-contact-v5-detail-item">
+                    <i class="fa fa-phone gblue-contact-v5-detail-icon"></i>
+                    <!-- <i class="fa-brands fa-whatsapp gblue-contact-v5-detail-icon"></i> -->
+                    <div class="gblue-contact-v5-detail-text">
+                        <span class="gblue-contact-v5-detail-label">Phone:</span>
+                        <a href="tel:+919822988313" class="gblue-contact-v5-detail-link">+91 9403892430</a>
+                    </div>
+                </div>
+                <div class="gblue-contact-v5-detail-item">
+                    <!-- <i class="fa fa-map-marker gblue-contact-v5-detail-icon"></i> -->
+                    <i class="fa-solid fa-location-dot gblue-contact-v5-detail-icon"></i>
+                    <div class="gblue-contact-v5-detail-text">
+                        <span class="gblue-contact-v5-detail-label">Address:</span>
+                        <p class="gblue-contact-v5-address-text">
+                            S.No. 31 FL No. C2 805, Belcastel,<br>
+                            Keshavnagar, Mundhwa, Pune - 411036,<br>
+                            Maharashtra, India.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="gblue-contact-v5-map-label">Plant Address</p>
+           <iframe  class="gblue-contact-v5-map-embed"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d957.2434702294936!2d74.59981910514468!3d18.232890148155974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc374d1a1776ad1%3A0xcee207c37ddfd5f2!2sG-121%2C%20Maharashtra%20Industrial%20Development%20Corporation%20Area%2C%20Baramati%2C%20Gojubavi%2C%20Maharashtra%20413133!5e1!3m2!1sen!2sin!4v1752151866950!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+            <div class="gblue-contact-v5-social-links">
+                <a href="#" class="gblue-contact-v5-social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="gblue-contact-v5-social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="gblue-contact-v5-social-icon" aria-label="Youtube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" class="gblue-contact-v5-social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            
+            </div>
+    </div>
+</section>
+
+
 
     <footer class="custom-footer">
       <div class="footer-container">
-        <!-- Logo and Address -->
         <div class="footer-section">
           <img
-            src="./assets/new logo .png"
-            alt="EraBlue Logo"
+            src="./assets/gblue logo bg removed.png"
             class="footer-logo"
+            alt="Logo"
           />
-          <h3>Gblue Technology</h3>
+          <h3>Gblue Technology Pvt Ltd</h3>
           <p>
-            S.No. 31 FL No. C2 805,<br />
-            Belcastel, Keshavnagar, Mundhwa, Pune - 411036<br />
-            Maharashtra, India.
+            S.No. 31 FL No. C2 805,<br />Belcastel, Keshavnagar, Mundhwa, Pune -
+            411036<br />Maharashtra, India.
           </p>
           <div class="social-icons">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-instagram"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-youtube"></i></a>
-            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
           </div>
         </div>
-        <!-- Quick Links -->
+
         <div class="footer-section">
-          <h4 class="footer-qlink">Quick Links</h4>
+          <h4>Quick Links</h4>
           <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/about">Company</a></li>
-            <li><a href="#certificate">Certificate</a></li>
-            <li><a href="/product">Product</a></li>
+            <li><a href="#">Certificate</a></li>
+            <li><a href="#">Product</a></li>
             <li><a href="/contact">Contact</a></li>
             <li><a href="./blogs">Blogs</a></li>
             <li><a href="./careers">Careers</a></li>
+            <li><a href="./deleteaccount">Delete Account</a></li>
+            <li><a href="./privacypolicy">Privacy Policy</a></li>
           </ul>
         </div>
-        <!-- Products -->
+
         <div class="footer-section">
-          <h4 class="footer-qlink">Products</h4>
+          <h4>Products</h4>
           <ul>
-            <li>AdBlue 800</li>
-            <li>AdBlue ® / DEF Plant ER – 2000</li>
-            <li>AdBlue ® / DEF Plant ER – 6000</li>
-            <li>AdBlue ® / DEF Plant ER – 10000</li>
-            <li>AdBlue ® / DEF Plant ER – 12000</li>
-            <li>Electro De-Ironized Plant</li>
+            <li>AdBlue bucket in 20 litres</li>
+            <li>AdBlue bucket in 10 litres</li>
+            <li>AdBlue bucket in 5 litres</li>
           </ul>
         </div>
       </div>
@@ -159,6 +207,6 @@
       <p>&copy; 2025 Gblue Technology pvt Ltd. All rights reserved.</p>
     </div>
 
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
   </body>
 </html>

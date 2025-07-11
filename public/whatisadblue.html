@@ -3,56 +3,81 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What is Adblue - Gblue Technology</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
 
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="icon"
-      href="./assets/faviconicon-removebg-preview.png"
-      type="image/png"
-    />
-    <title>What is AdBlue? - Gblue Technology</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r148/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    
+    <script
+      type="text/javascript"
+      src="https://d3mkw6s8thqya7.cloudfront.net/integration-plugin.js"
+      id="aisensy-wa-widget"
+      widget-id="aaahgm"
+    >
+    </script>
+   
   </head>
   <body>
     <header>
-      <div class="header-data">
-        <div class="logo">
-          <div class="logoimg"><img src="./assets/new logo .png" /></div>
-          <div class="logopara">Gblue Technology</div>
-        </div>
-        <div class="contact-info">
-          <p>📞 +91-9822988313</p>
-          <p>✉️ gbluetechnology@gmail.com</p>
-        </div>
+      <div class="logo">
+        <img
+          src="./assets/gblue logo 512x512.png"
+          alt="logo"
+        />
+        <div class="logopara">Gblue Technology</div>
+      </div>
+      <div class="contact-info-desktop">
+        <p>📞 +91-9403892430</p>
+        <p>✉️ gbluetechnology@gmail.com</p>
       </div>
     </header>
 
-    <nav>
+    <div class="floating-navbar-container">
+      <nav>
+        <div class="nav-links">
+          <a href="/" class="nav-link">Home</a>
+          <a href="/about" class="nav-link">About</a>
+          <a href="/contact" class="nav-link">Contact</a>
+          <a href="/careers" class="nav-link">Careers</a>
+          <a href="/blogs" class="nav-link">Blog</a>
+        </div>
+        <div class="contact-info-mobile">
+          <p>📞 +91-9403892430</p>
+          <p>✉️ gbluetechnology@gmail.com</p>
+        </div>
+      </nav>
       <div class="hamburger-menu">
         <span></span>
         <span></span>
         <span></span>
       </div>
-      <div class="nav-links">
-        <a href="/" class="nav-link" data-page="home">Home</a>
-        <a href="/about" class="nav-link" data-page="about">About</a>
-        <a href="/contact" class="nav-link" data-page="contact">Contact</a>
-        <a href="/careers" class="nav-link" data-page="careers">Careers</a>
-        <a href="/blogs" class="nav-link" data-page="blogs">Blog</a>
-      </div>
-    </nav>
+    </div>
 
-    <main class="article1-main">
-      <header class="article1-header">
-        <h1 class="article1-title">What is AdBlue</h1>
-        <p class="article1-subtitle">The drive toward a greener future</p>
+
+
+     <main class="article2-main">
+      <header class="article2-header">
+        <h1 class="article2-title">What is AdBlue</h1>
+        <p class="article2-subtitle">The drive toward a greener future</p>
       </header>
 
-      <section class="article1-content">
-        <div class="article1-hero">
+      <section class="article2-content">
+        <div class="article2-hero-img">
           <img
             src="./assets/blogi.PNG"
             alt="Sustainable technology"
@@ -60,8 +85,8 @@
           />
         </div>
 
-        <div class="article1-body">
-          <p class="article1-body-p">
+        <div class="article2-body">
+          <p class="article2-body-paragraph">
             AdBlue is a type of diesel exhaust fluid (DEF) that reduces the
             amount of harmful nitrogen oxides (NOx) emitted by a diesel engine.
             The colourless, non-toxic liquid is stored in separate AdBlue tanks
@@ -69,8 +94,8 @@
             additive nor a fuel.
           </p>
 
-          <h2 class="article1-section-title">What is AdBlue?</h2>
-          <p class="article1-body-p"></p>
+          <h2 class="article2-section-title">What is AdBlue?</h2>
+          <p class="article2-body-paragraph"></p>
           <ul>
             <li>
               AdBlue is a non-toxic, colorless, odorless, and non-flammable
@@ -91,8 +116,8 @@
             </li>
           </ul>
 
-          <h2 class="article1-section-title">What Is AdBlue Made Of?</h2>
-          <p class="article1-body-p">
+          <h2 class="article2-section-title">What Is AdBlue Made Of?</h2>
+          <p class="article2-body-paragraph">
             AdBlue is a colourless mixture of highly-purified adBlue grade urea
             (32.5%) and highly-purified pharmaceutical grade deionised water
             (67.5%).The urea in AdBlue contains ammonia, which is the active
@@ -115,15 +140,15 @@
             </li>
           </ul>
 
-          <h2 class="article1-section-title">How does AdBlue work?</h2>
-          <div class="article1-hero2">
+          <h2 class="article2-section-title">How does AdBlue work?</h2>
+          <div class="article2-hero-img-secondary">
             <img
               src="./assets/blog5.PNG"
               alt="Sustainable technology"
               loading="lazy"
             />
           </div>
-          <p class="article1-body-p">
+          <p class="article2-body-paragraph">
             AdBlue is a high purity, 32.5% urea solution directly injected into
             the exhaust gas where it serves as reducing agent. The released
             ammonia subsequently reacts with the nitric oxides on the catalyst
@@ -132,11 +157,11 @@
             emission can be reduced.
           </p>
 
-          <h2 class="article1-section-title">
+          <h2 class="article2-section-title">
             What happens if I run out of Adblue?
           </h2>
 
-          <p class="article1-body-p">
+          <p class="article2-body-paragraph">
             If you run out of AdBlue while you’re driving, then the engine’s
             power and performance will be reduced to limit its emissions. Once
             you’ve stopped, you won’t be able to restart the engine if the
@@ -145,21 +170,21 @@
             the dashboard when there's around 1500 miles' worth of AdBlue left.
           </p>
 
-          <h2 class="article1-section-title">
+          <h2 class="article2-section-title">
             How much AdBlue does my car use and how long does it last?
           </h2>
 
-          <p>
+          <p class="article2-body-paragraph">
             A typical diesel engine needs enough AdBlue to match 4-6% of the
             amount of diesel it uses. In other words, the engine needs 4-6
             litres of AdBlue for every 100 litres of fuel it consumes. AdBlue
             consumption is quite consistent and predictable, making it easy for
             you to forecast how much you need regularly.
           </p>
-          <h2 class="article1-section-title">
+          <h2 class="article2-section-title">
             What is the Adblue warning light?
           </h2>
-          <p>
+          <p class="article2-body-paragraph">
             The Adblue warning light is an indicator on your car’s dashboard. It
             signals when Adblue levels are low and is usually accompanied by a
             milage countdown. When the light is on your car’s Adblue tank needs
@@ -168,20 +193,20 @@
             to your vehicle going into reduced power mode and in some cases the
             car won’t start. You’ll need to switch it off to restart it.
           </p>
-          <h2 class="article1-section-title">
+          <h2 class="article2-section-title">
             Is it safe to drive with the AdBlue warning light on?
           </h2>
-          <p>
+          <p class="article2-body-paragraph">
             It’s not a major safety issue, but if you don’t top up, you’ll
-            eventually run out of AdBlue and you won’t be able to start the car.
+             eventually run out of AdBlue and you won’t be able to start the car.
             When the warning light first comes on you’ll have plenty of time to
             refill.
           </p>
 
-          <h2 class="article1-section-title">
+          <h2 class="article2-section-title">
             What happens if I put AdBlue in the diesel tank?
           </h2>
-          <p>
+          <p class="article2-body-paragraph">
             Putting it directly into your fuel tank could cause expensive damage
             to your fuel tank, pump and injection system. If you start the
             engine it's likely to be an expensive write-off, so don’t touch the
@@ -192,52 +217,51 @@
       </section>
     </main>
 
-    <footer class="custom-footer">
+
+
+   <footer class="custom-footer">
       <div class="footer-container">
-        <!-- Logo and Address -->
         <div class="footer-section">
           <img
-            src="./assets/new logo .png"
-            alt="EraBlue Logo"
+            src="./assets/gblue logo bg removed.png"
             class="footer-logo"
+            alt="Logo"
           />
-          <h3>Gblue Technology</h3>
+          <h3>Gblue Technology Pvt Ltd</h3>
           <p>
-            S.No. 31 FL No. C2 805,<br />
-            Belcastel, Keshavnagar, Mundhwa, Pune - 411036<br />
-            Maharashtra, India.
+            S.No. 31 FL No. C2 805,<br />Belcastel, Keshavnagar, Mundhwa, Pune -
+            411036<br />Maharashtra, India.
           </p>
           <div class="social-icons">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-instagram"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-youtube"></i></a>
-            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
           </div>
         </div>
-        <!-- Quick Links -->
+
         <div class="footer-section">
-          <h4 class="footer-qlink">Quick Links</h4>
+          <h4>Quick Links</h4>
           <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/about">Company</a></li>
-            <li><a href="#certificate">Certificate</a></li>
-            <li><a href="/product">Product</a></li>
+            <li><a href="#">Certificate</a></li>
+            <li><a href="#">Product</a></li>
             <li><a href="/contact">Contact</a></li>
             <li><a href="./blogs">Blogs</a></li>
             <li><a href="./careers">Careers</a></li>
+            <li><a href="./deleteaccount">Delete Account</a></li>
+            <li><a href="./privacypolicy">Privacy Policy</a></li>
           </ul>
         </div>
-        <!-- Products -->
+
         <div class="footer-section">
-          <h4 class="footer-qlink">Products</h4>
+          <h4>Products</h4>
           <ul>
-            <li>AdBlue 800</li>
-            <li>AdBlue ® / DEF Plant ER – 2000</li>
-            <li>AdBlue ® / DEF Plant ER – 6000</li>
-            <li>AdBlue ® / DEF Plant ER – 10000</li>
-            <li>AdBlue ® / DEF Plant ER – 12000</li>
-            <li>Electro De-Ironized Plant</li>
+            <li>AdBlue bucket in 20 litres</li>
+            <li>AdBlue bucket in 10 litres</li>
+            <li>AdBlue bucket in 5 litres</li>
           </ul>
         </div>
       </div>
@@ -247,6 +271,6 @@
       <p>&copy; 2025 Gblue Technology pvt Ltd. All rights reserved.</p>
     </div>
 
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
   </body>
 </html>

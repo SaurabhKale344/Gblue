@@ -3,195 +3,217 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gblue Technology - Home</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
 
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="icon"
-      href="./assets/faviconicon-removebg-preview.png"
-      type="image/png"
-    />
-    <title>Gblue Technology</title>
-    <meta
-      name="description"
-      content="Trusted provider of AdBlue solutions for emissions compliance and optimal engine performance. GBLUE Technology stands for quality and reliability."
-    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r148/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    
+    <script
+      type="text/javascript"
+      src="https://d3mkw6s8thqya7.cloudfront.net/integration-plugin.js"
+      id="aisensy-wa-widget"
+      widget-id="aaahgm"
+    >
+    </script>
+   
   </head>
   <body>
     <header>
-      <div class="header-data">
-        <div class="logo">
-          <div class="logoimg"><img src="./assets/new logo .png" /></div>
-          <div class="logopara">Gblue Technology</div>
-        </div>
-        <div class="contact-info">
-          <p>📞 +91-9822988313</p>
-          <p>✉️ gbluetechnology@gmail.com</p>
-        </div>
+      <div class="logo">
+        <img
+          src="./assets/gblue logo 512x512.png"
+          alt="logo"
+        />
+        <div class="logopara">Gblue Technology</div>
+      </div>
+      <div class="contact-info-desktop">
+        <p>📞 +91-9403892430</p>
+        <p>✉️ gbluetechnology@gmail.com</p>
       </div>
     </header>
 
-    <nav>
+    <div class="floating-navbar-container">
+      <nav>
+        <div class="nav-links">
+          <a href="/" class="nav-link active">Home</a>
+          <a href="/about" class="nav-link">About</a>
+          <a href="/contact" class="nav-link">Contact</a>
+          <a href="/careers" class="nav-link">Careers</a>
+          <a href="/blogs" class="nav-link">Blog</a>
+        </div>
+        <div class="contact-info-mobile">
+          <p>📞 +91-9403892430</p>
+          <p>✉️ gbluetechnology@gmail.com</p>
+        </div>
+      </nav>
       <div class="hamburger-menu">
         <span></span>
         <span></span>
         <span></span>
       </div>
-      <div class="nav-links">
-        <a href="/" class="nav-link" data-page="home">Home</a>
-        <a href="/about" class="nav-link" data-page="about">About</a>
-        <a href="/contact" class="nav-link" data-page="contact">Contact</a>
-        <a href="/careers" class="nav-link" data-page="careers">Careers</a>
-        <a href="/blogs" class="nav-link" data-page="blogs">Blog</a>
-      </div>
-    </nav>
-    <!-- <br /> -->
-
-    <div class="slider">
-      <!-- Each slide -->
-      <div class="slide">
-        <img src="./assets/slideimg1-min.png" alt="Image 1" loading="lazy" />
-      </div>
-      <div class="slide">
-        <img src="./assets/slideimg2-min.png" alt="Image 2" loading="lazy" />
-      </div>
-      <div class="slide">
-        <img src="./assets/slideimg3-min.png" alt="Image 3" loading="lazy" />
-      </div>
-
-      <!-- Navigation buttons -->
-      <button class="prev" onclick="goPrev()">&#10094;</button>
-      <button class="next" onclick="goNext()">&#10095;</button>
     </div>
 
-    <br />
-    <hr />
-    <br />
-    <section class="about-section">
-      <div class="image-container">
-        <img
-          src="./assets/adblue bucket.png"
-          alt="AdBlue Cans"
-          loading="lazy"
-        />
-      </div>
-      <div class="content-container">
-        <h2>What is DEF?</h2>
-        <p>
-          DEF stands for Diesel Exhaust Fluid, a non-toxic, colorless, odorless,
-          and non-flammable fluid that's injected into the exhaust system of
-          diesel vehicles to reduce harmful emissions. It's also known as
-          AdBlue.
-        </p>
-        <a href="/whatisdef" class="btn">KNOW MORE</a>
-      </div>
-    </section>
-    <hr class="dashed-line" />
+    <main>
+      <div class="canvas-container">
+        <div class="animation-content-wrapper">
+          <canvas id="animationCanvas"></canvas>
 
-    <section class="about-section">
-      <div class="image-container">
-        <img src="./assets/eco.png" alt="AdBlue Cans" loading="lazy" />
+          <div class="search-animation-wrapper">
+            <div class="search-animation-container" id="searchAnimationContainer">
+              <div class="search-bar">
+                <input
+                  type="text"
+                  class="search-input"
+                  id="searchInput"
+                  placeholder="Type your query..."
+                  readonly
+                />
+                <button class="search-button" id="searchButton">Search</button>
+              </div>
+
+              <div class="loading-indicator" id="loadingIndicator">Searching...</div>
+
+              <div class="search-results" id="searchResults">
+                <h3>Results for "how much nox is reduced by adblue":</h3>
+                <p>
+                  Diesel Exhaust Fluid (DEF), also known as AdBlue, is a crucial component in
+                  Selective Catalytic Reduction (SCR) systems used in modern diesel vehicles.
+                  It is designed to significantly reduce nitrogen oxide (NOx) emissions,
+                  which are harmful pollutants. When injected into the exhaust stream,
+                  DEF undergoes a chemical reaction that converts NOx into harmless
+                  nitrogen gas and water vapor. Studies and real-world applications
+                  demonstrate that DEF can reduce NOx emissions by **85% to 95%**,
+                  making it highly effective in helping vehicles meet stringent
+                  emission standards.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+        </div>
       </div>
-      <div class="content-container">
-        <h2>Why DEF is Important?</h2>
-        <p>
-          Diesel Exhaust Fluid (DEF) is a key component in diesel engines
-          because it helps reduce harmful emissions and ensure that the vehicle
-          meets emission standards. It achieves a remarkable 85 - 95% reduction
-          in NOx emissions.
-        </p>
-        <a href="/whydefimp" class="btn">KNOW MORE</a>
-      </div>
-    </section>
 
-    <br />
-    <hr />
-    <br />
+      <section class="about-section">
+        <div class="image-container">
+          <img
+            src="./assets/gblue bucket real bg.png"
+            alt="AdBlue"
+          />
+        </div>
+        <div class="content-container">
+          <h2>What is DEF?</h2>
+          <p>
+            DEF stands for Diesel Exhaust Fluid, a non-toxic, colorless, odorless, and non-flammable fluid that's injected into the exhaust system of diesel vehicles to reduce harmful emissions. It's also known as AdBlue.
+          </p>
+          <a href="/whatisdef" class="btn">KNOW MORE</a>
+        </div>
+      </section>
 
-    <h4 class="services">Our Services</h4>
-    <section id="products" class="cards">
-      <div class="card">
-        <img src="./assets/premium-quality.png" alt="Card 1" loading="lazy" />
+      
 
-        <div class="card-content">
+      <section class="about-section">
+        <div class="image-container">
+          <img
+            src="./assets/eco.png"
+            alt="Eco"
+          />
+        </div>
+        <div class="content-container">
+          <h2>Why DEF is Important?</h2>
+          <p>
+            Diesel Exhaust Fluid (DEF) is a key component in diesel engines because it helps reduce harmful emissions and ensure that the vehicle meets emission standards. It achieves a remarkable 85 - 95% reduction in NOx emissions.
+          </p>
+          <a href="/whydefimp" class="btn">KNOW MORE</a>
+        </div>
+      </section>
+
+      <h4 class="services">Our Services</h4>
+      <section id="products" class="cards">
+        <div class="card">
+          <img
+            src="./assets/premium-quality.png"
+            alt="Quality Product"
+          />
           <h3>Quality Product</h3>
           <p>
-            Premium-grade AdBlue to ensure compliance with emissions standards
-            and improve engine efficiency.
+            Premium-grade AdBlue to ensure compliance with emissions standards and improve engine efficiency.
           </p>
-          <a href="./quality">Learn More</a>
+          <a href="./quality" class="btn">Learn More</a>
         </div>
-      </div>
-      <div class="card">
-        <img src="./assets/oil-barrel.png" alt="Card 2" loading="lazy" />
-        <div class="card-content">
-          <h3>Bulk Supply of AdBlue</h3>
-          <p>
-            Reliable and timely delivery of bulk AdBlue supplies for large-scale
-            operations.
-          </p>
-          <a href="#">Learn More</a>
+        <div class="card">
+          <img
+            src="./assets/oil-barrel.png"
+            alt="Bulk"
+          />
+          <h3>Bulk Supply</h3>
+          <p>Reliable and timely delivery of bulk AdBlue supplies for large-scale operations.</p>
+          <a href="#" class="btn">Learn More</a>
         </div>
-      </div>
-      <div class="card">
-        <img
-          src="./assets/strategic-partnerships.png"
-          alt="Card 3"
-          loading="lazy"
-        />
-        <div class="card-content">
+        <div class="card">
+          <img
+            src="./assets/strategic-partnerships.png"
+            alt="Partnerships"
+          />
           <h3>Retail Partnerships</h3>
           <p>Join our network to offer AdBlue to your customers seamlessly.</p>
-          <a href="./partnerships">Learn More</a>
+          <a href="./partnerships" class="btn">Learn More</a>
         </div>
-      </div>
-      <div class="card">
-        <img src="./assets/trucks.png" alt="Card 4" loading="lazy" />
-        <div class="card-content">
+        <div class="card">
+          <img
+            src="./assets/trucks.png"
+            alt="Fleet"
+          />
           <h3>Fleet DEF Management</h3>
-          <p>
-            We provide fleet DEF management services to ensure your vehicles are
-            always running efficiently and meet emission standards.
-          </p>
-          <a href="#">Learn More</a>
+          <p>We provide fleet DEF management services to ensure your vehicles are always running efficiently and meet emission standards.</p>
+          <a href="#" class="btn">Learn More</a>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <footer class="custom-footer">
       <div class="footer-container">
-        <!-- Logo and Address -->
         <div class="footer-section">
           <img
-            src="./assets/new logo .png"
-            alt="EraBlue Logo"
+            src="./assets/gblue logo bg removed.png"
             class="footer-logo"
+            alt="Logo"
           />
-          <h3>Gblue Technology</h3>
+          <h3>Gblue Technology Pvt Ltd</h3>
           <p>
-            S.No. 31 FL No. C2 805,<br />
-            Belcastel, Keshavnagar, Mundhwa, Pune - 411036<br />
-            Maharashtra, India.
+            S.No. 31 FL No. C2 805,<br />Belcastel, Keshavnagar, Mundhwa, Pune -
+            411036<br />Maharashtra, India.
           </p>
           <div class="social-icons">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-instagram"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-youtube"></i></a>
-            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
           </div>
         </div>
-        <!-- Quick Links -->
+
         <div class="footer-section">
-          <h4 class="footer-qlink">Quick Links</h4>
+          <h4>Quick Links</h4>
           <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/about">Company</a></li>
-            <li><a href="#certificate">Certificate</a></li>
-            <li><a href="/product">Product</a></li>
+            <li><a href="#">Certificate</a></li>
+            <li><a href="#">Product</a></li>
             <li><a href="/contact">Contact</a></li>
             <li><a href="./blogs">Blogs</a></li>
             <li><a href="./careers">Careers</a></li>
@@ -199,16 +221,13 @@
             <li><a href="./privacypolicy">Privacy Policy</a></li>
           </ul>
         </div>
-        <!-- Products -->
+
         <div class="footer-section">
-          <h4 class="footer-qlink">Products</h4>
+          <h4>Products</h4>
           <ul>
-            <li>AdBlue 800</li>
-            <li>AdBlue ® / DEF Plant ER – 2000</li>
-            <li>AdBlue ® / DEF Plant ER – 6000</li>
-            <li>AdBlue ® / DEF Plant ER – 10000</li>
-            <li>AdBlue ® / DEF Plant ER – 12000</li>
-            <li>Electro De-Ironized Plant</li>
+            <li>AdBlue bucket in 20 litres</li>
+            <li>AdBlue bucket in 10 litres</li>
+            <li>AdBlue bucket in 5 litres</li>
           </ul>
         </div>
       </div>
@@ -218,6 +237,6 @@
       <p>&copy; 2025 Gblue Technology pvt Ltd. All rights reserved.</p>
     </div>
 
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
   </body>
 </html>
