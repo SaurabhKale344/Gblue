@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Outfit:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Outfit:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@300;400;500;700&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;700&display=swap');
+
+
 /* Variables for easy theme changes */
 :root {
   --color-primary-blue: #0054a6; /* Buttons, headers, nav background */
@@ -1206,7 +1213,7 @@ canvas {
 /* --- START: GBlue Contact Page V5 Specific CSS --- */
 
 /* Import Google Fonts - Ensure these are linked in your <head> as well if not done globally */
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Outfit:wght@300;400;500;600&display=swap');
+
 
 /* Define colors and variables directly for this page */
 .gblue-contact-v5-section {
@@ -1625,7 +1632,7 @@ canvas {
 /* --- START: GBlue Careers Page V1 Specific CSS --- */
 
 /* Import Google Fonts (if not already globally linked) */
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Outfit:wght@300;400;500;600&display=swap');
+
 
 .gblue-careers-v1-main {
     --gblue-careers-v1-primary-blue: #0054a6;
@@ -2351,7 +2358,7 @@ a {
 /* whatisdef css start */
 
 /* Base font imports (should be at the top of your main CSS file) */
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@300;400;500;700&display=swap'); */
+
 
 /* All styles here are specific to elements within the whatisdef-page-container */
 
@@ -3034,7 +3041,7 @@ a {
 /* --- Global-like styling for this page's elements (NO :root variables) --- */
 /* Font imports should be at the very top of your main CSS file for Poppins and Roboto */
 /* Example:
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;700&display=swap');
+
 */
 
 /* Apply a background to the body for this page's aesthetic (can be overridden by global body styles) */
@@ -3448,7 +3455,7 @@ a {
 /* --- Base Typography & Colors (applied within main context) --- */
 /* Ensure Poppins and Roboto are imported in your global CSS or HTML <head> */
 /* Example:
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;700&display=swap');
+
 */
 
 
