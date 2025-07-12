@@ -5898,13 +5898,7 @@ padding-top: 10px;
 }
 
 /* --- Content Body --- */
-.privacy-content {
-    /* No specific styles needed here, as .privacy-body handles content within */
-}
 
-.privacy-body {
-    /* This div wraps the main text content */
-}
 
 .privacy-paragraph {
     margin-bottom: 20px;
