@@ -22,16 +22,16 @@
       "destination": "/public/assets/$1"
     },
     {
-      "source": "/(.*\\.(?:png|jpg|jpeg|gif|svg|webp|ico))",
+      "source": "/(.*\\.(?:png|jpg|jpeg|gif|svg|webp|ico|mp4|webm|ogg|mp3|wav|flac))",
       "destination": "/public/$1"
     },
     {
-      "source": "/(.*\\.html)",
-      "destination": "/public/$1"
+      "source": "/",
+      "destination": "/dist/index.html"
     },
     {
       "source": "/(.*)",
-      "destination": "/dist/$1"
+      "destination": "/server.js"
     }
   ]
 }
