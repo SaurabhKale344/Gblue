@@ -2606,10 +2606,7 @@ a {
 }
 
 /* For the 4th perceived wave (reusing ::after) */
-.table-section:hover::after:nth-of-type(2) { /* This specific selector won't work directly like this in CSS for another instance */
-    animation: airWaveHorizontal 2.5s ease-out forwards;
-    animation-delay: 1.8s; /* Staggered delay */
-}
+
 
 
 /* IMPORTANT: For more than 2 distinct pseudo-elements (e.g., 4-5 individual waves),
