@@ -1,8 +1,9 @@
 // script.js
 
 // Import Three.js explicitly for module scope
-import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.165.0/build/three.module.js';
-// import * as THREE from 'three'; // <--- Change to this
+// Using 'three' directly for Parcel to resolve in the build process for index.html
+import * as THREE from 'three'; 
+
 // GSAP is loaded globally via CDN, so access it via window.gsap
 
 // --- Global Variables for 3D Scene ---
@@ -311,67 +312,6 @@ function animate() {
     renderer.render(scene, camera); // Render the scene
 }
 
-// --- Hamburger Menu & Mobile Navigation ---
-const hamburger = document.querySelector('.hamburger-menu');
-const floatingNavbarContainer = document.querySelector('.floating-navbar-container');
-const navLinks = floatingNavbarContainer ? floatingNavbarContainer.querySelector('.nav-links') : null;
-const contactInfoMobile = floatingNavbarContainer ? floatingNavbarContainer.querySelector('.contact-info-mobile') : null;
-
-
-if (hamburger) { // Check if hamburger exists on the page
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        if (navLinks) navLinks.classList.toggle('active');
-        if (contactInfoMobile) contactInfoMobile.classList.toggle('active'); // Toggle mobile contact info visibility
-    });
-}
-
-// Close nav when a link is clicked (for mobile)
-if (navLinks) { // Check if navLinks exists on the page
-    navLinks.querySelectorAll('a').forEach((link) => {
-        link.addEventListener('click', () => {
-            if (hamburger) hamburger.classList.remove('active');
-            navLinks.classList.remove('active');
-            if (contactInfoMobile) contactInfoMobile.classList.remove('active');
-        });
-    });
-}
-
-// careers page logic starts
-// --- Accordion Toggle Function ---
-// This function helps open and close the career benefit details.
-// It needs to be available everywhere, so we put it on 'window'.
-window.gblueCareersToggleDetail = function(clickedHeader) {
-    // Find the closest big box (the 'li' item) that contains the clicked part.
-    const benefitItem = clickedHeader.closest('.gblue-careers-v1-benefit-item');
-    // Also find the overall container for all accordion items.
-    const accordionContainer = clickedHeader.closest('.gblue-careers-v1-benefits-accordion');
-
-    // If we found both the item and its container, let's do the magic!
-    if (benefitItem && accordionContainer) {
-        // --- NEW LOGIC HERE: Close any other open items ---
-        // Find ALL the big boxes (<li> items) inside this accordion container.
-        const allBenefitItems = accordionContainer.querySelectorAll('.gblue-careers-v1-benefit-item');
-
-        // Go through each big box...
-        allBenefitItems.forEach(item => {
-            // If it's NOT the box we just clicked AND it's currently open...
-            if (item !== benefitItem && item.classList.contains('active')) {
-                // ...then close it! (remove its 'active' switch)
-                item.classList.remove('active');
-            }
-        });
-        // --- END OF NEW LOGIC ---
-
-        // Now, flip the 'active' switch (open or close) on the box we DID click.
-        benefitItem.classList.toggle('active');
-    }
-};
-
-
-
-
-// careers page logic end
 
 // --- Initialize functions ---
 document.addEventListener('DOMContentLoaded', () => {

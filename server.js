@@ -8,6 +8,8 @@ const app = express();
 // Define the port on which the server will listen
 const PORT = process.env.PORT || 3000;
 
+app.use(express.static(path.join(__dirname, "dist")));
+
 // Serve static files (like images, CSS, JS)
 app.use(express.static(path.join(__dirname, "public")));
 
