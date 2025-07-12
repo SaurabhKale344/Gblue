@@ -4,8 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;700&display=swap');
 
-/* @import the global styles - Parcel will handle bundling this */
-@import url('./global.css');
+
 /* Variables for easy theme changes */
 :root {
   --color-primary-blue: #0054a6; /* Buttons, headers, nav background */
