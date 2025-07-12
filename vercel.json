@@ -2,13 +2,16 @@
   "version": 2,
   "builds": [
     {
-      "src": "package.json",
+      "src": "server.js",
       "use": "@vercel/node"
     },
     {
       "src": "public/index.html",
       "use": "@vercel/static-build",
-      "config": { "distDir": "dist" }
+      "config": {
+        "distDir": "dist",
+        "buildCommand": "npx parcel build public/index.html --dist-dir dist"
+      }
     }
   ],
   "routes": [
