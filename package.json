@@ -5,7 +5,7 @@
   
   "scripts": {
     "start": "node server.js",
-    "build": "parcel build public/index.html --dist-dir dist",
+    "build": "npx parcel build public/index.html --dist-dir dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
