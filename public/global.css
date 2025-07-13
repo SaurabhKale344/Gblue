@@ -2190,17 +2190,6 @@ canvas {
     margin: 0 auto;
 }
 
-.gblue-careers-v1-contact-email {
-    color: var(--gblue-careers-v1-primary-blue);
-    font-weight: 500;
-    text-decoration: none;
-    transition: color var(--gblue-careers-v1-transition-ease);
-}
-
-.gblue-careers-v1-contact-email:hover {
-    color: var(--gblue-careers-v1-accent-green);
-    text-decoration: underline;
-}
 
 /* --- Why Work With Us Section (Accordion Style) --- */
 .gblue-careers-v1-why-us-section {
@@ -6359,6 +6348,36 @@ padding-top: 10px;
     line-height: 1.8; /* More spacing for contact lines */
 }
 
+
+.gblue-careers-v1-contact-email {
+    color: #0054a6;
+    font-weight: 500;
+    text-decoration: none; /* Keep this to remove default underline */
+    position: relative; /* Essential for positioning the pseudo-element */
+    transition: color 0.3s ease; /* Adjust transition for color, or use your variable if defined globally */
+    display: inline-block; /* Ensures the pseudo-element's width is based on the link's content */
+}
+
+.gblue-careers-v1-contact-email::after {
+    content: ''; /* Required for pseudo-elements */
+    position: absolute; /* Position relative to the link */
+    width: 0; /* Starts with no width */
+    height: 2px; /* Thickness of the underline */
+    left: 0; /* Starts from the left */
+    bottom: -3px; /* Position below the text, adjust as needed */
+    background-color: #8dc63f; /* Color of the underline */
+    transition: width 0.3s ease; /* Animate the width */
+}
+
+.gblue-careers-v1-contact-email:hover {
+    color: #0054a6; /* Hover color for the text */
+}
+
+.gblue-careers-v1-contact-email:hover::after {
+    width: 100%; /* Expands to full width on hover */
+}
+
+
 /* --- Responsive Adjustments --- */
 
 /* Tablet (max-width: 992px) */
@@ -6392,6 +6411,8 @@ padding-top: 10px;
         margin-bottom: 10px;
     }
 }
+
+
 
 /* Mobile (max-width: 768px) */
 @media (max-width: 768px) {
