@@ -2676,6 +2676,10 @@ a {
   .read-more-btn {
     padding: 8px 15px;
   }
+  .blog-section {
+  padding: 60px 20px;
+
+}
 }
 
 /* Responsive CSS for Mobiles (max-width: 480px) */
@@ -2727,6 +2731,10 @@ a {
   .read-more-btn {
     padding: 6px 12px;
   }
+   .blog-section {
+  padding: 30px 20px !important;
+
+}
 }
 
 /* Blogs page css ends*/
@@ -3342,7 +3350,7 @@ a {
         width: 100%; /* Take full width available in container */
         max-width: none; /* Override any max-width to allow it to be wider than screen */
         margin: 0; /* Remove auto margin to allow table to stick to sides for scrolling */
-        border-radius: 0; /* Remove border-radius that might clip content during scroll */
+        /* Remove border-radius that might clip content during scroll */
     }
     /* Ensure table cells have a minimum width to prevent crushing on scroll */
     .data-table th,
