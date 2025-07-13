@@ -1,97 +1,26 @@
 {
   "version": 2,
+  "outputDirectory": "public",  
   "rewrites": [
     {
-      "source": "/global.css",
-      "destination": "/public/global.css"
+      "source": "/dist/(.*)",  
+      "destination": "/dist/$1"
     },
     {
-      "source": "/style.css",
-      "destination": "/public/style.css"
-    },
-    {
-      "source": "/utils.js",
-      "destination": "/public/utils.js"
-    },
-    {
-      "source": "/script.js",
-      "destination": "/public/script.js"
-    },
-    {
-      "source": "/assets/(.*)",
-      "destination": "/public/assets/$1"
-    },
-    {
-      "source": "/(.*\\.(?:png|jpg|jpeg|gif|svg|webp|ico|mp4|webm|ogg|mp3|wav|flac))",
-      "destination": "/public/$1"
-    },
-    {
-      "source": "/about",
-      "destination": "/public/about.html"
-    },
-    {
-      "source": "/blogs",
-      "destination": "/public/blogs.html"
-    },
-    {
-      "source": "/BSnorms",
-      "destination": "/public/BSnorms.html"
-    },
-    {
-      "source": "/career",
-      "destination": "/public/career.html"
-    },
-    {
-      "source": "/contact",
-      "destination": "/public/contact.html"
-    },
-    {
-      "source": "/deleteaccount",
-      "destination": "/public/deleteaccount.html"
-    },
-    {
-      "source": "/FAQs",
-      "destination": "/public/FAQs.html"
-    },
-    {
-      "source": "/partnerships",
-      "destination": "/public/partnerships.html"
-    },
-    {
-      "source": "/privacypolicy",
-      "destination": "/public/privacypolicy.html"
-    },
-    {
-      "source": "/quality",
-      "destination": "/public/quality.html"
-    },
-    {
-      "source": "/storeadblue",
-      "destination": "/public/storeadblue.html"
-    },
-    {
-      "source": "/whatdef",
-      "destination": "/public/whatdef.html"
-    },
-    {
-      "source": "/whatisadblue",
-      "destination": "/public/whatisadblue.html"
-    },
-    {
-      "source": "/whatisscr",
-      "destination": "/public/whatisscr.html"
-    },
-    {
-      "source": "/whydefimp",
-      "destination": "/public/whydefimp.html"
-    },
-    {
-      "source": "/",
+      "source": "/",           
       "destination": "/dist/index.html"
     },
     {
-      "source": "/(.*)",
-      "destination": "/dist/$1"
+      "source": "/api/(.*)",   
+      "destination": "/server.js"
+    },
+    {
+      "source": "/(.*)",     
+      "destination": "/$1.html" 
+    },
+    {
+      "source": "/(.*)",       
+      "destination": "/server.js"
     }
   ]
 }
