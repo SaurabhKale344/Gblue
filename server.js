@@ -8,83 +8,37 @@ const app = express();
 // Define the port on which the server will listen
 const PORT = process.env.PORT || 3000;
 
-// Serve static files (like images, CSS, JS)
+// FOR LOCAL DEVELOPMENT:
+// Serve static files from 'public'
+// On Vercel, `outputDirectory: "public"` in vercel.json handles this directly
+// from the CDN for actual deployments.
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use(express.static(path.join(__dirname, "dist")));
-
-
-
-// Define routes for the HTML pages (without .html extension)
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
+// FOR LOCAL DEVELOPMENT:
+// This catch-all serves clean URLs for local testing by finding the .html file.
+// On Vercel, the `rewrites` in vercel.json (specifically "/(.*)" -> "/$1.html")
+// will handle this before the request even reaches server.js.
+app.get('*', (req, res) => {
+  const filePath = path.join(__dirname, 'public', req.path + '.html');
+  res.sendFile(filePath, (err) => {
+    if (err) {
+      // If the .html file isn't found, check if it's the root and serve index.html
+      if (req.path === '/' || req.path === '/index') {
+          return res.sendFile(path.join(__dirname, 'public', 'index.html'));
+      }
+      // If still not found, send a 404
+      res.status(404).send('Page not found via Express server.');
+    }
+  });
 });
 
-app.get("/about", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "about.html"));
-});
 
+// Handle non-existent .html routes redirect for local testing (optional, less critical now)
+// On Vercel, this is usually handled by vercel.json.
+// app.get("*.html", (req, res) => {
+//   res.redirect(301, req.path.slice(0, -5)); // Redirect to the clean URL (e.g., /about)
+// });
 
-app.get("/contact", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "contact.html"));
-});
-
-app.get("/whatisDEF", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "whatdef.html"));
-});
-
-app.get("/whydefimp", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "whydefimp.html"));
-});
-
-app.get("/careers", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "career.html"));
-});
-
-app.get("/deleteaccount", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "deleteaccount.html"));
-});
-
-app.get("/privacypolicy", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "privacypolicy.html"));
-});
-
-app.get("/blogs", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "blogs.html"));
-});
-
-app.get("/quality", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "quality.html"));
-});
-
-app.get("/partnerships", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "partnerships.html"));
-});
-
-app.get("/BSnorms", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "BSnorms.html"));
-});
-
-app.get("/whatisadblue", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "whatisadblue.html"));
-});
-
-app.get("/whatisscr", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "whatisscr.html"));
-});
-
-app.get("/storeadblue", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "storeadblue.html"));
-});
-
-app.get("/FAQs", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "FAQs.html"));
-});
-
-// Handle non-existent routes (e.g., /about.html) to serve proper pages
-app.get("*.html", (req, res) => {
-  res.redirect(301, req.path.slice(0, -5)); // Redirect to the clean URL (e.g., /about)
-});
 
 // Start the server
 app.listen(PORT, () => {

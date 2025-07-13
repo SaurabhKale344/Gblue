@@ -3,20 +3,12 @@
   "outputDirectory": "public",  
   "rewrites": [
     {
-      "source": "/dist/(.*)",  
-      "destination": "/dist/$1"
-    },
-    {
-      "source": "/",           
-      "destination": "/dist/index.html"
-    },
-    {
-      "source": "/api/(.*)",   
+      "source": "/api/(.*)",    
       "destination": "/server.js"
     },
     {
-      "source": "/(.*)",     
-      "destination": "/$1.html" 
+      "source": "/(.*)",      
+      "destination": "/$1.html"
     },
     {
       "source": "/(.*)",       
