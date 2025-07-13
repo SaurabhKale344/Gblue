@@ -86,7 +86,7 @@ body {
   }
 } */
 
-/* Main Header (Logo & Name on Left, Contact Info on Right for Desktop) */
+/* Header CSS for All Devices (Desktop-First) */
 header {
   background: var(--color-white);
   padding: 0px 200px;
@@ -106,7 +106,7 @@ header {
   align-items: center;
   gap: 10px;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: var(--color-primary-blue);
 }
 
@@ -124,7 +124,38 @@ header {
   white-space: nowrap; /* Prevent wrapping */
 }
 
-/* Floating Navbar Container (Below Header, Rounded, Not Fixed) */
+/* Header Responsive Styles */
+/* Tablet & Smaller Devices (max-width: 768px) */
+@media (max-width: 768px) {
+  header {
+    padding: 15px 20px; /* Adjust header padding for smaller screens */
+  }
+  .logo {
+    font-size: 1.8rem; /* Slightly smaller font for logo text */
+  }
+  .logo img {
+    height: 90px; /* Significantly smaller logo on tablets/mobiles */
+  }
+  .contact-info-desktop {
+    display: none; /* Hide desktop contact info on mobile sizes */
+  }
+}
+
+/* Extra Small Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.5rem; /* Even smaller font size for very small screens */
+  }
+  .logo img {
+    height: 65px; /* Adjust logo height further for smaller phones */
+  }
+}
+
+/* ========================================================================== */
+/* FLOATING NAVBAR CONTAINER STYLES (`.floating-navbar-container`)            */
+/* ========================================================================== */
+
+/* Floating Navbar Container CSS for All Devices (Desktop-First) */
 .floating-navbar-container {
   margin: 20px auto; /* Center the nav and provide space from header */
   max-width: 800px; /* Not full width */
@@ -139,7 +170,7 @@ header {
   align-items: center;
 }
 
-/* Navigation Links */
+/* Navigation Links (Parent: `nav`) */
 nav {
   display: flex;
   flex-grow: 1; /* Allow nav to take available space */
@@ -181,19 +212,19 @@ nav .nav-links {
   width: 100%;
 }
 
-/* Contact Info within Floating Navbar (Mobile Only) */
+/* Contact Info within Floating Navbar (Mobile Only - Hidden by Default) */
 .floating-navbar-container .contact-info-mobile {
-  display: none; /* Hidden on desktop */
+  display: none; /* Hidden on desktop by default */
 }
 
-/* Hamburger Menu */
+/* Hamburger Menu (Hidden on Desktop by Default) */
 .hamburger-menu {
   display: none; /* Hidden by default on desktop */
   cursor: pointer;
   flex-direction: column;
   justify-content: space-between; /* Distribute lines evenly */
   width: 30px;
-  height: 16px; /* Adjusted height to make lines appear closer and distinct */
+  height: 15px; /* Adjusted height to make lines appear closer and distinct */
   position: absolute; /* Position relative to floating-navbar-container */
   right: 20px; /* Align to the right of the floating bar */
   top: 50%;
@@ -222,10 +253,93 @@ nav .nav-links {
 }
 
 .slider {
-  display: none; /* Hide the slider */
+  display: none; /* Hide the slider (assuming this is a legacy or unused element) */
 }
 
-/* Canvas Container: Parent for the combined animation content */
+/* Floating Navbar Container Responsive Styles */
+/* Desktop & Larger Devices (min-width: 769px) - Ensures desktop styles */
+@media (min-width: 769px) {
+  .hamburger-menu {
+    display: none !important; /* Explicitly hide hamburger on desktop */
+  }
+  .floating-navbar-container .nav-links.active {
+    display: flex; /* Ensure links are always visible on desktop if somehow active */
+  }
+  .floating-navbar-container .contact-info-mobile {
+    display: none !important; /* Explicitly hide mobile contact info on desktop */
+  }
+}
+
+/* Tablet & Smaller Devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .floating-navbar-container {
+    margin: 10px 20px; /* Adjust margin to fit smaller screens better */
+    max-width: calc(100% - 40px); /* Allow it to take more width, accounting for margins */
+    border-radius: 10px; /* Slightly less rounded corners for mobile */
+    padding: 15px 15px; /* Adjust padding */
+    flex-direction: column; /* Stack items vertically in the container */
+    align-items: flex-start; /* Align items to the left when stacked */
+    background: var(--color-primary-blue); /* Ensure solid background for mobile menu */
+  }
+  .floating-navbar-container nav {
+    width: 100%; /* Nav takes full width of container */
+    justify-content: flex-start; /* Align nav links to left */
+  }
+  .floating-navbar-container .nav-links {
+    flex-direction: column; /* Stack nav links vertically */
+    align-items: flex-start; /* Align links to the left */
+    width: 100%;
+    display: none; /* Hidden by default, controlled by hamburger JS toggle */
+    margin-top: 10px; /* Space below hamburger */
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Separator line */
+  }
+  .nav-link {
+    margin: 8px 0; /* Adjust margin for stacked links */
+    padding: 8px 0;
+  }
+  .floating-navbar-container .nav-links.active {
+    display: flex; /* Shows the navigation links when hamburger is active */
+  }
+  .floating-navbar-container .contact-info-mobile {
+    display: none; /* Hidden by default, will be shown along with nav-links by JS */
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--color-white); /* Ensure text is visible */
+  }
+  .floating-navbar-container .contact-info-mobile.active {
+    display: flex; /* Shows mobile contact info when hamburger is active */
+  }
+
+  .hamburger-menu {
+    display: flex; /* Show hamburger on mobile */
+    position: absolute;
+    right: 15px; /* Adjust position */
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+/* Extra Small Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .floating-navbar-container {
+    margin: 10px 10px; /* Even tighter margins for very small screens */
+    max-width: calc(100% - 20px);
+  }
+  .floating-navbar-container .contact-info-mobile p {
+    font-size: 0.8rem; /* Smaller font for contact info on tiny screens */
+  }
+}
+
+/* ========================================================================== */
+/* MAIN CONTENT - CANVAS CONTAINER STYLES (`.canvas-container`)               */
+/* ========================================================================== */
+
+/* Canvas Container CSS for All Devices (Desktop-First) */
 .canvas-container {
   height: 600px;
   width: 100%;
@@ -234,10 +348,9 @@ nav .nav-links {
   margin-top: 20px;
   box-shadow: var(--box-shadow-medium);
   position: relative; /* Essential for positioning children absolutely */
-  /* Remove flex properties from here, they are now on .animation-content-wrapper */
 }
 
-/* New wrapper for NOx animation and search component */
+/* Animation Content Wrapper (NOx animation and search component) */
 .animation-content-wrapper {
   position: absolute; /* Position within canvas-container */
   top: 0;
@@ -258,8 +371,7 @@ canvas {
   display: block;
 }
 
-/* START: Google Search Animation Component Styles */
-/* Wrapper for the search component, now positioned relative to animation-content-wrapper */
+/* Search Animation Wrapper */
 .search-animation-wrapper {
   position: relative; /* No longer absolute, controlled by flexbox */
   bottom: auto; /* Reset from previous absolute positioning */
@@ -353,9 +465,87 @@ canvas {
   color: #777;
   opacity: 0;
 }
-/* END: Google Search Animation Component Styles */
 
+/* Canvas Container Responsive Styles */
+/* Tablet & Smaller Devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .canvas-container {
+    height: 600px; /* Maintain height for now, adjust inner content */
+    margin-top: 10px;
+    padding-bottom: 15px; /* Smaller bottom padding */
+  }
 
+  /* Animation Content Wrapper Responsive (stacks vertically) */
+  .animation-content-wrapper {
+    flex-direction: column; /* Crucial: Stack canvas and search vertically */
+    padding: 15px; /* Adjust padding for mobile */
+    gap: 15px; /* Space between stacked items */
+  }
+
+  canvas {
+    max-width: 100%; /* Canvas takes full width when stacked */
+    height: 300px !important; /* Smaller canvas height on mobile when stacked */
+  }
+
+  /* Search animation adjustments for mobile */
+  .search-animation-wrapper {
+    width: 100%; /* Take full width when stacked */
+    max-width: none; /* No max-width when stacked */
+    justify-content: center; /* Center horizontally when stacked */
+  }
+  .search-animation-container {
+    padding: 10px; /* Even smaller padding on mobile */
+  }
+  .search-bar {
+    flex-direction: column; /* Stack search input and button vertically */
+    gap: 8px;
+  }
+  .search-input,
+  .search-button {
+    width: 100%; /* Make search input and button full width */
+    padding: 6px 10px; /* Even smaller padding */
+    font-size: 0.85em; /* Smaller font */
+  }
+  .search-results h3 {
+    font-size: 1em;
+  }
+  .search-results p {
+    font-size: 0.75em;
+  }
+}
+
+/* Extra Small Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  /* Canvas Container Responsive (further adjustments) */
+  .canvas-container {
+    height: 450px; /* Slightly shorter on very small screens */
+  }
+  canvas {
+    height: 250px !important; /* Even shorter canvas height */
+  }
+
+  /* Search animation adjustments for very small mobile */
+  .search-animation-container {
+    padding: 8px; /* Even smaller padding */
+  }
+  .search-input,
+  .search-button {
+    padding: 5px 8px; /* Minimal padding */
+    font-size: 0.8em; /* Smallest font */
+  }
+  .search-results h3 {
+    font-size: 0.9em;
+  }
+  .search-results p {
+    font-size: 0.7em;
+  }
+}
+
+/* ========================================================================== */
+/* MAIN CONTENT - ABOUT SECTION STYLES (`.about-section`)                     */
+/* ========================================================================== */
+
+/* About Section CSS for All Devices (Desktop-First) */
 .about-section {
   display: flex;
   flex-wrap: wrap;
@@ -388,9 +578,9 @@ canvas {
   letter-spacing: normal;
 }
 
-.content-container p{
-    /* letter-spacing: 0.5px; */
-        font-family: "Roboto", sans-serif;
+.content-container p {
+  /* letter-spacing: 0.5px; */
+  font-family: "Roboto", sans-serif;
 }
 .btn {
   display: inline-block;
@@ -410,11 +600,52 @@ canvas {
   box-shadow: 0 8px 20px rgba(141, 198, 63, 0.4); /* Enhanced shadow */
 }
 
-/* Removed .dashed-line */
-.dashed-line {
-  display: none;
+/* About Section Responsive Styles */
+/* Tablet & Smaller Devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 40px 15px; /* Reduce padding for tighter mobile layout */
+    gap: 50px; /* Reduce gap between image and content */
+    flex-direction: column; /* Stack image and content vertically */
+  }
+  .image-container {
+    text-align: center; /* Center image if it's smaller than container */
+  }
+  .image-container img {
+    max-width: 50%; /* Make image responsive to its container */
+    height: auto; /* Maintain aspect ratio */
+  }
+  .content-container {
+    max-width: 100%; /* Allow content to take full width */
+    text-align: center; /* Center align text for better mobile readability */
+  }
+  .content-container h2 {
+    font-size: 1.8rem; /* Smaller heading */
+  }
+  .btn {
+    margin-top: 25px; /* Smaller top margin for buttons */
+  }
 }
 
+/* Extra Small Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .about-section {
+    padding: 30px 10px; /* Very minimal padding */
+    gap: 30px;
+  }
+  .image-container img {
+    max-width: 90%; /* Allow image to take more width */
+  }
+  .content-container h2 {
+    font-size: 1.6rem;
+  }
+}
+
+/* ========================================================================== */
+/* MAIN CONTENT - SERVICES SECTION TITLE STYLES (`.services`)                 */
+/* ========================================================================== */
+
+/* Services Section Title CSS for All Devices (Desktop-First) */
 .services {
   text-align: center;
   font-size: 2.25rem;
@@ -424,23 +655,44 @@ canvas {
 }
 
 .services::after {
-    content: "";
-    display: block;
-    width: 100px;
-    height: 3px;
-    background: var(--color-primary-blue);
-    margin: 0.1rem auto 0;
-    border-radius: 3px;
+  content: "";
+  display: block;
+  width: 100px;
+  height: 3px;
+  background: var(--color-primary-blue);
+  margin: 0.1rem auto 0;
+  border-radius: 3px;
 }
 
+/* Services Section Title Responsive Styles */
+/* Tablet & Smaller Devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .services {
+    font-size: 1.8rem; /* Smaller heading */
+    margin-top: 20px;
+  }
+}
 
+/* Extra Small Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .services {
+    font-size: 1.6rem;
+    padding-bottom: 2rem;
+  }
+}
+
+/* ========================================================================== */
+/* MAIN CONTENT - SERVICES CARDS STYLES (`.cards`)                            */
+/* ========================================================================== */
+
+/* Services Cards CSS for All Devices (Desktop-First) */
 .cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 40px; /* Increased gap for more breathing room */
   padding: 40px 20px; /* More padding around the grid */
-  padding-bottom: 100px ;
+  padding-bottom: 100px;
 }
 
 .card {
@@ -478,7 +730,6 @@ canvas {
   transform: scale(1.1) rotate(0.5deg); /* Subtle icon animation on card hover */
 }
 
-
 .card h3 {
   font-family: var(--font-heading);
   font-size: 1.6em; /* Larger heading */
@@ -488,7 +739,6 @@ canvas {
 
 .card p {
   font-size: 1em;
-  
   color: var(--color-text-main); /* Ensure text is readable */
   line-height: 1.7; /* Improved line height */
   letter-spacing: 0.2px; /* Subtle letter spacing */
@@ -506,7 +756,7 @@ canvas {
   text-transform: uppercase;
   letter-spacing: 0.5px;
   box-shadow: 0 3px 10px rgba(141, 198, 63, 0.3);
-  margin-top: 0px ;
+  margin-top: 0px;
 }
 
 .card .btn:hover {
@@ -515,6 +765,55 @@ canvas {
   box-shadow: 0 5px 15px rgba(141, 198, 63, 0.5);
 }
 
+/* Services Cards Responsive Styles */
+/* Tablet & Smaller Devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .cards {
+    padding: 20px 15px;
+    gap: 30px; /* Adjust gap */
+  }
+  .card {
+    max-width: 85%; /* Allow cards to be wider on smaller screens to fill space */
+    padding: 25px;
+  }
+  .card img {
+    height: 100px; /* Smaller icons */
+    width: 100px;
+    margin-bottom: 20px;
+  }
+  .card h3 {
+    font-size: 1.4em;
+  }
+  .card p {
+    font-size: 0.9em;
+  }
+}
+
+/* Extra Small Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .cards {
+    padding: 15px 10px;
+   
+    gap: 20px;
+  }
+  .card {
+    padding: 20px;
+    max-width: 95%; /* Almost full width for cards on very small screens */
+  }
+  .card img {
+    height: 60px;
+    width: 60px;
+  }
+  .card h3 {
+    font-size: 1.2em;
+  }
+}
+
+/* ========================================================================== */
+/* FOOTER SECTION STYLES (`<footer>`)                                         */
+/* ========================================================================== */
+
+/* Footer CSS for All Devices (Desktop-First) */
 .custom-footer {
   background: var(--color-dark-navy-outline); /* Darker footer */
   color: var(--color-white);
@@ -552,12 +851,9 @@ canvas {
   margin-bottom: 5px;
 }
 
-.footer-section ul li{
-  
+.footer-section ul li {
   margin-bottom: 5px;
 }
-
-
 
 .footer-section ul li a::after {
   content: '';
@@ -580,18 +876,16 @@ canvas {
 
 .footer-logo {
   height: 150px;
-  
 }
 
-.social-icons{
-    padding-top: 10px;
+.social-icons {
+  padding-top: 10px;
 }
 .social-icons a {
   color: var(--color-white);
   margin-right: 10px;
   font-size: 1.2rem;
   transition: color var(--transition-speed), transform var(--transition-speed); /* Animation for icons */
- 
 }
 
 .social-icons a:hover {
@@ -599,6 +893,60 @@ canvas {
   transform: scale(1.2) translateY(-3px); /* Scale and slight lift */
 }
 
+/* Footer Responsive Styles */
+/* Tablet & Smaller Devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .custom-footer {
+    padding: 30px 20px; /* Adjust padding for smaller screens */
+  }
+  .footer-container {
+    flex-direction: column; /* Stack footer sections vertically */
+    gap: 30px; /* Adjust gap between stacked sections */
+    text-align: center; /* Center align text in footer sections */
+  }
+  .footer-section {
+    width: 100%; /* Each section takes full width */
+    max-width: none; /* Remove any max-width constraints */
+  }
+  .footer-section ul {
+    text-align: center; /* Center align list items for consistency */
+  }
+  .footer-logo {
+    height: 120px; /* Smaller logo in footer on mobile */
+  }
+  .social-icons {
+    justify-content: center; /* Center social icons when stacked */
+    display: flex; /* Ensure flexbox for centering */
+  }
+}
+
+/* Extra Small Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .custom-footer {
+    padding: 20px 10px; /* Even tighter padding for very small screens */
+  }
+  .footer-logo {
+    height: 100px; /* Further reduce logo size */
+  }
+  .footer-section h4,
+  .footer-section h3 {
+    font-size: 1rem; /* Slightly smaller headings */
+  }
+  .footer-section ul li a,
+  .footer-section p {
+    font-size: 0.85rem; /* Smaller text */
+  }
+  .social-icons a {
+    font-size: 1rem; /* Smaller social icons */
+    margin-right: 8px; /* Slightly less margin */
+  }
+}
+
+/* ========================================================================== */
+/* COPYRIGHT SECTION STYLES (`.copyright`)                                    */
+/* ========================================================================== */
+
+/* Copyright Section CSS for All Devices (Desktop-First) */
 .copyright {
   text-align: center;
   background: var(--color-primary-blue); /* Darker copyright bar */
@@ -607,157 +955,54 @@ canvas {
   font-size: 0.9rem;
 }
 
-/* Responsive Adjustments */
-@media (min-width: 769px) {
-  .hamburger-menu {
-    display: none !important; /* Hide hamburger on desktop */
-  }
-  .floating-navbar-container .nav-links.active {
-    display: flex; /* Ensure links are always visible on desktop */
-  }
-  .floating-navbar-container .contact-info-mobile {
-    display: none !important; /* Hide mobile contact info on desktop */
-  }
-}
-
-@media (max-width: 768px) {
-  header {
-    padding: 15px 20px;
-    box-shadow: var(--box-shadow-light);
-  }
-  .contact-info-desktop {
-    display: none; /* Hide desktop contact info on mobile */
-  }
-  .floating-navbar-container {
-    margin: 10px 20px; /* Adjust margin for mobile */
-    max-width: calc(100% - 40px); /* Adjust width for padding */
-    border-radius: 10px; /* Smaller rounded corners */
-    padding: 12px 15px; /* Adjust padding */
-    flex-direction: column; /* Stack items vertically */
-    align-items: flex-start; /* Align items to the left */
-    background: var(--color-primary-blue); /* Ensure solid background for mobile menu */
-  }
-  .floating-navbar-container nav {
-    width: 100%; /* Nav takes full width of container */
-    justify-content: flex-start; /* Align nav links to left */
-  }
-  .floating-navbar-container .nav-links {
-    flex-direction: column;
-    align-items: flex-start; /* Align links to the left */
-    width: 100%;
-    display: none; /* Hidden by default, controlled by hamburger */
-    margin-top: 10px; /* Space below hamburger */
-    padding-top: 10px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-  }
-  .floating-navbar-container .nav-links.active {
-    display: flex;
-  }
-  .floating-navbar-container .contact-info-mobile {
-    display: none; /* Hidden by default, shown with nav-links */
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    margin-top: 10px;
-    padding-top: 10px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-  }
-  .floating-navbar-container .contact-info-mobile.active {
-    display: flex;
-  }
-
-  .hamburger-menu {
-    display: flex; /* Show hamburger on mobile */
-    position: absolute;
-    right: 15px; /* Adjust position */
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  /* Adjust canvas container for mobile */
-  .canvas-container {
-    height: 600px; /* Adjust total height for mobile */
-    margin-top: 10px;
-    padding-bottom: 15px; /* Smaller bottom padding */
-  }
-
-  /* On mobile, stack content vertically again */
-  .animation-content-wrapper {
-    flex-direction: column; /* Stack vertically on smaller screens */
-    padding: 15px; /* Adjust padding for mobile */
-    gap: 15px; /* Space between stacked items */
-  }
-
-  canvas {
-    max-width: 100%; /* Allow canvas to take full width when stacked */
-    height: 300px !important; /* Smaller canvas height on mobile when stacked */
-  }
-
-  /* Search animation adjustments for mobile */
-  .search-animation-wrapper {
-    width: 100%; /* Take full width when stacked */
-    max-width: none; /* No max-width when stacked */
-    justify-content: center; /* Center horizontally when stacked */
-  }
-  .search-animation-container {
-    padding: 10px; /* Even smaller padding on mobile */
-  }
-  .search-bar {
-    flex-direction: column; /* Stack vertically on small screens */
-    gap: 8px;
-  }
-  .search-input,
-  .search-button {
-    width: 100%;
-    padding: 6px 10px; /* Even smaller padding */
-    font-size: 0.85em; /* Smaller font */
-  }
-  .search-results h3 {
-    font-size: 1em;
-  }
-  .search-results p {
-    font-size: 0.75em;
-  }
-}
-
+/* Copyright Section Responsive Styles */
+/* Extra Small Mobile Devices (max-width: 480px) */
 @media (max-width: 480px) {
-  .logo {
-    font-size: 1.1rem;
-  }
-  .logo img {
-    height: 35px;
-  }
-  .floating-navbar-container {
-    margin: 10px 10px;
-    max-width: calc(100% - 20px);
-  }
-  .floating-navbar-container .contact-info-mobile p {
-    font-size: 0.8rem;
-  }
-  .cards {
-    padding: 20px 10px;
-    gap: 25px;
-  }
-  .card {
-    padding: 25px;
-  }
-  .card img {
-    height: 70px;
-    width: 70px;
-  }
-  .card h3 {
-    font-size: 1.4em;
+  .copyright {
+    font-size: 0.8em; /* Smaller font for copyright text */
+    padding: 10px; /* Reduced padding */
   }
 }
 
-/* --- START: About Page Specific CSS --- */
+/*
+ * This CSS file is specific to your "About Us" page.
+ * It's structured to provide styles for each major HTML section on this page.
+ * For each section, base (desktop-first) styles are defined first,
+ * followed immediately by responsive adjustments within media queries.
+ *
+ * This file could be public/about.css, and then imported or linked in your about.html.
+ * Ensure the viewport meta tag is present in your about.html:
+ * <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ */
 
-/* Main wrapper for about page content to apply consistent spacing */
+/* ========================================================================== */
+/* MAIN WRAPPER FOR ABOUT PAGE CONTENT (`.about-main-content`)                */
+/* ========================================================================== */
+
+/* Main wrapper CSS for All Devices (Desktop-First) */
 .about-main-content {
     padding: 20px 0;
 }
 
-/* Reusable Section Titles (for "About Gblue" and "Core Values") */
+/* Responsive adjustments for .about-main-content */
+@media (max-width: 768px) {
+    .about-main-content {
+        padding: 15px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-main-content {
+        padding: 10px 0;
+    }
+}
+
+/* ========================================================================== */
+/* REUSABLE SECTION TITLES & PARAGRAPHS                                       */
+/* (These are general styles applied to multiple sections, not tied to a single parent) */
+/* ========================================================================== */
+
+/* Reusable Section Titles CSS for All Devices (Desktop-First) */
 .section-title-modern {
     font-family: var(--font-heading);
     font-size: 2.8em;
@@ -834,7 +1079,55 @@ canvas {
     line-height: 1.7;
 }
 
-/* --- Hero Section - Abstract & Dynamic --- */
+/* Reusable Section Titles & Paragraphs Responsive Styles */
+/* Tablet & Smaller Devices (max-width: 992px) */
+@media (max-width: 992px) {
+    .section-title-modern {
+        font-size: 2.4em;
+        margin-bottom: 50px;
+    }
+}
+
+/* Tablet & Smaller Devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .section-title-modern {
+        font-size: 2em;
+        margin-bottom: 40px;
+    }
+    .section-title-modern::after {
+        width: 100px;
+    }
+    .section-title-modern-alt {
+        font-size: 1.8em;
+        margin-bottom: 25px;
+    }
+    .section-title-modern-alt::after {
+        width: 70px;
+    }
+    .section-paragraph, .section-paragraph-alt {
+        font-size: 0.95em;
+    }
+}
+
+/* Extra Small Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .section-title-modern {
+        font-size: 1.8em;
+        margin-bottom: 30px;
+    }
+    .section-title-modern::after {
+        width: 80px;
+    }
+    .section-title-modern-alt {
+        font-size: 1.6em;
+    }
+}
+
+/* ========================================================================== */
+/* HERO SECTION (`.about-hero-modern`)                                        */
+/* ========================================================================== */
+
+/* Hero Section CSS for All Devices (Desktop-First) */
 .about-hero-modern {
     position: relative;
     width: 100%;
@@ -892,7 +1185,50 @@ canvas {
     margin: 0 auto;
 }
 
-/* --- About Intro Section (Image & Text Split) --- */
+/* Hero Section Responsive Styles */
+/* Tablet & Smaller Devices (max-width: 992px) */
+@media (max-width: 992px) {
+    .modern-heading {
+        font-size: 3em;
+    }
+    .modern-subheading {
+        font-size: 1.2em;
+    }
+}
+
+/* Tablet & Smaller Devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .modern-heading {
+        font-size: 2.5em;
+    }
+    .modern-subheading {
+        font-size: 1.1em;
+    }
+    .about-hero-modern {
+        height: 350px;
+        margin-bottom: 60px;
+    }
+}
+
+/* Extra Small Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .modern-heading {
+        font-size: 2em;
+    }
+    .modern-subheading {
+        font-size: 1em;
+    }
+    .about-hero-modern {
+        height: 300px;
+        margin-bottom: 40px;
+    }
+}
+
+/* ========================================================================== */
+/* ABOUT INTRO SECTION (`.about-intro-section`)                               */
+/* ========================================================================== */
+
+/* About Intro Section CSS for All Devices (Desktop-First) */
 .about-intro-section {
     display: flex;
     flex-wrap: wrap;
@@ -910,11 +1246,7 @@ canvas {
 .intro-image-block {
     flex: 1;
     min-width: 300px;
-    
 }
-
-
-
 
 .intro-image-block {
     display: flex;
@@ -930,8 +1262,68 @@ canvas {
     transition: transform var(--transition-smooth-secondary); /* Smooth transition */
 }
 
+/* About Intro Section Responsive Styles */
+/* Tablet & Smaller Devices (max-width: 992px) */
+@media (max-width: 992px) {
+    .about-intro-section {
+        flex-direction: column;
+        gap: 40px;
+        padding: 50px 30px; /* Adjusted horizontal padding */
+        margin-left: 20px;
+        margin-right: 20px;
+        max-width: calc(100% - 40px); /* Account for new margins */
+    }
+    .intro-image-block {
+        order: -1; /* Puts image above content on smaller screens */
+        width: 100%; /* Ensure it takes full width when stacked */
+        min-width: unset; /* Allow it to shrink below 300px */
+    }
+    .intro-image-block img {
+        max-width: 70%; /* Image doesn't stretch full width, keeps proportion */
+    }
+    .intro-content-block {
+        text-align: center; /* Center aligns text when stacked */
+        width: 100%; /* Ensure it takes full width when stacked */
+        min-width: unset; /* Remove min-width constraint to allow shrinking */
+        padding: 0 20px; /* Add internal horizontal padding to text block */
+    }
+}
 
-/* --- Mission & Vision Section (Distinctive Side-by-Side) --- */
+/* Tablet & Smaller Devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .about-intro-section {
+        padding: 40px 15px; /* Further reduced padding */
+        margin-bottom: 60px;
+        max-width: calc(100% - 30px); /* Adjust max-width again */
+    }
+    .intro-image-block img {
+        max-width: 80%; /* Image takes a bit more space */
+    }
+    .intro-content-block {
+        padding: 0 10px; /* Further reduce internal padding for text block */
+    }
+}
+
+/* Extra Small Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .about-intro-section {
+        padding: 30px 10px; /* Very minimal padding */
+        margin-bottom: 40px;
+        max-width: calc(100% - 20px); /* Adjust max-width for smallest screens */
+    }
+    .intro-image-block img {
+        max-width: 95%; /* Almost full width for image */
+    }
+    .intro-content-block {
+        padding: 0 5px; /* Even smaller internal padding */
+    }
+}
+
+/* ========================================================================== */
+/* MISSION & VISION SECTION (`.mv-modern-section`)                            */
+/* ========================================================================== */
+
+/* Mission & Vision Section CSS for All Devices (Desktop-First) */
 .mv-modern-section {
     display: flex;
     flex-wrap: wrap;
@@ -980,7 +1372,52 @@ canvas {
     box-shadow: var(--box-shadow-floating);
 }
 
-/* --- Core Values Section (Interactive Grid) --- */
+/* Mission & Vision Section Responsive Styles */
+/* Tablet & Smaller Devices (max-width: 992px) */
+@media (max-width: 992px) {
+    .mv-modern-section {
+        flex-direction: column; /* Stack mission/vision items vertically */
+        gap: 30px;
+        padding: 50px 30px; /* Adjusted horizontal padding */
+        margin-left: 20px;
+        margin-right: 20px;
+        max-width: calc(100% - 40px); /* Account for new margins */
+    }
+    .mv-item {
+        min-width: unset; /* Remove min-width to allow flexible sizing */
+        width: 100%; /* Ensure it takes full width when stacked */
+    }
+}
+
+/* Tablet & Smaller Devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .mv-modern-section {
+        padding: 40px 15px;
+        margin-bottom: 60px;
+        max-width: calc(100% - 30px);
+    }
+    .mv-item {
+        padding: 30px;
+    }
+}
+
+/* Extra Small Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .mv-modern-section {
+        padding: 30px 10px;
+        margin-bottom: 40px;
+        max-width: calc(100% - 20px);
+    }
+    .mv-item {
+        padding: 25px;
+    }
+}
+
+/* ========================================================================== */
+/* CORE VALUES SECTION (`.core-values-modern-section`)                        */
+/* ========================================================================== */
+
+/* Core Values Section CSS for All Devices (Desktop-First) */
 .core-values-modern-section {
     max-width: 1200px;
     margin: 0 auto 80px auto;
@@ -1073,75 +1510,31 @@ canvas {
     text-align: center; /* Explicitly center this text */
 }
 
-/* --- Responsive Adjustments for Modern About Page --- */
+/* Core Values Section Responsive Styles */
+/* Tablet & Smaller Devices (max-width: 992px) */
 @media (max-width: 992px) {
-    .section-title-modern {
-        font-size: 2.4em;
-        margin-bottom: 50px;
-    }
-    .modern-heading {
-        font-size: 3em;
-    }
-    .modern-subheading {
-        font-size: 1.2em;
-    }
-    .about-intro-section {
-        flex-direction: column;
-        gap: 40px;
-        padding: 50px;
-    }
-    .intro-image-block {
-        order: -1;
-    }
-    .intro-content-block {
-        text-align: center;
-    }
-    .mv-modern-section {
-        flex-direction: column;
-        gap: 30px;
-        padding: 50px;
-    }
-    .mv-item {
-        min-width: unset;
+    .core-values-modern-section {
+        padding: 50px 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+        max-width: calc(100% - 40px);
     }
     .values-grid-modern {
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px; /* Slightly reduced gap */
     }
 }
 
+/* Tablet & Smaller Devices (max-width: 768px) */
 @media (max-width: 768px) {
-    .section-title-modern {
-        font-size: 2em;
-        margin-bottom: 40px;
-    }
-    .section-title-modern::after {
-        width: 100px;
-    }
-    .section-title-modern-alt {
-        font-size: 1.8em;
-        margin-bottom: 25px;
-    }
-    .section-title-modern-alt::after {
-        width: 70px;
-    }
-    .modern-heading {
-        font-size: 2.5em;
-    }
-    .modern-subheading {
-        font-size: 1.1em;
-    }
-    .about-hero-modern {
-        height: 350px;
-        margin-bottom: 60px;
-    }
-    .about-intro-section,
-    .mv-modern-section,
     .core-values-modern-section {
-        padding: 40px 20px;
+        padding: 40px 15px;
         margin-bottom: 60px;
+        max-width: calc(100% - 30px);
     }
-    .section-paragraph, .section-paragraph-alt {
-        font-size: 0.95em;
+    .values-grid-modern {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusted min-width for smaller tablets */
+        gap: 20px;
     }
     .value-item {
         padding: 30px;
@@ -1162,35 +1555,16 @@ canvas {
     }
 }
 
+/* Extra Small Mobile Devices (max-width: 480px) */
 @media (max-width: 480px) {
-    .section-title-modern {
-        font-size: 1.8em;
-        margin-bottom: 30px;
-    }
-    .section-title-modern::after {
-        width: 80px;
-    }
-    .section-title-modern-alt {
-        font-size: 1.6em;
-    }
-    .modern-heading {
-        font-size: 2em;
-    }
-    .modern-subheading {
-        font-size: 1em;
-    }
-    .about-hero-modern {
-        height: 300px;
-        margin-bottom: 40px;
-    }
-    .about-intro-section,
-    .mv-modern-section,
     .core-values-modern-section {
-        padding: 30px 15px;
+        padding: 30px 10px;
         margin-bottom: 40px;
+        max-width: calc(100% - 20px);
     }
     .values-grid-modern {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Stack items vertically on very small screens */
+        gap: 15px;
     }
     .value-item {
         padding: 25px;
@@ -2102,6 +2476,11 @@ canvas {
 
 /* --- Blogs Page CSS Starts --- */
 
+
+.blogpage-body{
+    background-color: white !important;
+
+}
 .blog-header {
   text-align: center;
   padding: 50px 20px;
@@ -2160,7 +2539,10 @@ a {
   align-items: center;
   text-align: center; /* This centers content within the flex column */
   background: #ffffff;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+ box-shadow: 
+  0 0 15px rgba(0, 0, 0, 0.1), /* full glow */
+  0 4px 6px rgba(0, 0, 0, 0.08); /* soft bottom shadow */
+
   border-radius: 0px 50px 0px 50px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -2369,7 +2751,7 @@ a {
     font-family: 'Poppins', sans-serif;
     line-height: 1.2;
     margin-top: 0;
-    margin-bottom: 10px;
+ 
 }
 
 .whatisdef-page-container h2 {
@@ -2420,11 +2802,22 @@ a {
 }
 
 .whatisdef-main-heading {
-    font-size: 2.8rem; /* Reduced size */
-    font-weight: 700;
-    margin-bottom: 15px;
-    letter-spacing: 0.05em;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    font-family: var(--font-heading); /* Ensure it uses your defined heading font */
+    font-size: 2.8em; /* Slightly larger, more impactful */
+    font-weight: 700; /* Keep it bold for impact */
+    text-align: center; /* Center for focus */
+   
+    position: relative;
+    padding-bottom: 5px; /* Space for the underline effect */
+
+    /* Text color swipe effect */
+    display: inline-block; /* Essential for text background/gradient to work */
+    background: linear-gradient(to right, var(--color-dark-navy-outline) 50%, var(--color-primary-blue) 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%; /* Double width for the gradient */
+    background-position: 0% 0%; /* Start at the first color */
+    transition: background-position var(--transition-smooth-text-swipe); /* Smooth transition for hover */
 }
 
 .whatisdef-intro-tagline {
@@ -2645,7 +3038,7 @@ a {
     font-family: 'Roboto', sans-serif;
     font-size: 1.15rem;
     color: #4A4A4A;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 /* Data Table Styling (unchanged, but its hover effect reacts to table-section hover) */
@@ -2715,6 +3108,8 @@ a {
     font-size: 1.0rem;
     color: #333333;
 }
+
+
 
 /* --- WhatIsDEF Section: Further Exploration Area (Now the main container) --- */
 .whatisdef-explore-area {
