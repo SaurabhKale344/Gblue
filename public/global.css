@@ -7709,3 +7709,377 @@ padding-top: 10px;
 
 
 /* reports page new css ends */
+
+
+/* long partnership new css starts */
+
+
+
+.longpartnership-main-content {
+    padding: 40px 5%;
+    max-width: 1300px;
+    margin: 0 auto;
+    font-family: 'Outfit', sans-serif;
+    margin-bottom: 7rem;
+}
+
+.longpartnership-page-header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 25px;
+    border-radius: 25px;
+    border-bottom: 5px solid #8dc63f;
+}
+
+.longpartnership-title {
+    font-size: 2.2rem;
+    color: #0054a6;
+    margin-bottom: 10px;
+}
+
+.longpartnership-subtitle {
+    font-size: 1rem;
+    color: var(--lp-color-text-dark);
+    opacity: 0.8;
+}
+
+/* --- Video Embedding Styles for Pump Section --- */
+
+.longpartnership-pump-visuals {
+    flex: 1;
+    min-width: 300px;
+    position: relative; /* Context for children */
+    transition: transform 0.3s ease;
+}
+
+.longpartnership-video-wrapper {
+    position: relative;
+    width: 100%;
+    /* Creates an aspect ratio (16:9) for the video container */
+    padding-bottom: 56.25%; 
+    height: 0;
+    overflow: hidden;
+    border-radius: 2px;
+    box-shadow: 0 5px 20px rgba(2, 84, 156, 0.4);
+    cursor: pointer;
+}
+
+.longpartnership-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* === Play Overlay Styles (Reused from Home Page Logic) === */
+
+.longpartnership-play-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 5;
+    pointer-events: none;
+    opacity: 1; /* Starts visible (paused state) */
+    transition: opacity 0.3s ease;
+}
+
+.longpartnership-play-overlay i {
+    font-size: 3rem;
+    color: var(--lp-color-white);
+    padding: 15px;
+    border: 3px solid var(--lp-color-white);
+    border-radius: 50%;
+    background: rgba(0, 84, 166, 0.6); 
+}
+
+/* --- Responsive Adjustments --- */
+
+@media (max-width: 992px) {
+    /* Optional: Add a slight lift to the video container on hover */
+    .longpartnership-pump-visuals:hover {
+        transform: scale(1.02);
+    }
+}
+
+/* === DEF PUMP SECTION (Priority) === */
+
+.longpartnership-pump-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
+    background: var(--lp-color-dark-navy);
+    color: var(--lp-color-white);
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    margin-top: 6rem;
+}
+
+.longpartnership-pump-visuals {
+    flex: 1;
+    min-width: 300px;
+}
+
+.longpartnership-pump-visuals img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--lp-border-radius);
+}
+
+.longpartnership-pump-details {
+    flex: 1;
+}
+
+.longpartnership-pump-headline {
+    font-size: 2rem;
+    color: rgb(68, 67, 67);
+    margin-bottom: 20px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.longpartnership-pump-tagline {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+.longpartnership-pump-tagline b {
+    color: var(--lp-color-accent-green);
+}
+
+.longpartnership-pump-benefits {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 30px;
+}
+
+.longpartnership-pump-benefits li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.longpartnership-pump-benefits i {
+    color: var(--lp-color-accent-green);
+    margin-right: 10px;
+}
+
+.longpartnership-priority-btn {
+    background: #8dc63f;
+    color: #0054a6  -blue !important;
+    font-size: 1.1rem;
+    padding: 12px 25px;
+    font-weight: 700;
+}
+
+.longpartnership-priority-btn:hover {
+    background: white;
+    transform: translateY(-3px) scale(1.02);
+}
+
+/* === DEALER/DISTRIBUTOR SECTION === */
+
+.longpartnership-dealer-section {
+    padding: 50px 0;
+    text-align: center;
+    margin-top: 6rem;
+}
+
+.longpartnership-dealer-title {
+    font-size: 2rem;
+    color: #0054a6;   
+    margin-bottom: 40px;
+}
+
+.longpartnership-option-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.longpartnership-option-card {
+    background: var(--lp-color-background-light);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 40px 30px;
+    border-radius: var(--lp-border-radius);
+    box-shadow: var(--lp-shadow-medium);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.longpartnership-option-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.longpartnership-card-icon {
+    font-size: 3rem;
+    color: rgb(68, 67, 67); 
+    margin-bottom: 20px;
+}
+
+.longpartnership-card-headline {
+    font-size: 1.6rem;
+    color: rgb(68, 67, 67); 
+    margin-bottom: 15px;
+}
+
+.longpartnership-card-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--lp-color-text-dark);
+    margin-bottom: 30px;
+    flex-grow: 1;
+}
+
+.longpartnership-card-description b {
+    color: var(--lp-color-dark-navy);
+}
+
+@media (max-width: 768px) {
+.longpartnership-dealer-section {
+    padding:  0;
+    text-align: center;
+    margin-top: 5rem;
+}
+.longpartnership-dealer-title{
+    font-size: 1.7rem;
+}
+}
+
+/* --- Updated CSS for Hover Fill Animation --- */
+
+/* --- Updated CSS for Simple Green Fill and Glow Animation --- */
+
+/* -----------------------------------
+   NOTE: HEX CODES USED: 
+   #0054a6 (Blue)
+   #8dc63f (Green - Fill/Glow)
+   #666666 (Grey - Initial Text)
+   #ffffff (White - Hover Text)
+   ----------------------------------- */
+
+.longpartnership-contact-btn {
+    /* Base styles essential for containing the pseudo-element */
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-top: auto; 
+    
+    position: relative; 
+    z-index: 1; 
+    overflow: hidden; 
+    
+    /* Ensure the text is above the filling layer */
+    transition: color 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.longpartnership-priority-btn {
+    /* Default State: Grey text, blending look (transparent background, blue border) */
+    background: transparent; 
+    color: #666666 !important; /* Initial Grey text color */
+    font-size: 1.1rem;
+    padding: 12px 25px;
+    font-weight: 700;
+    
+    /* Set up the initial border/look */
+   
+    box-shadow: none;
+}
+
+/* 1. The Filling Element (Starts invisible, Green color) */
+.longpartnership-priority-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #8dc63f; /* Green Fill Color */
+    
+    /* Fill animation transition */
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+    
+    /* Starts hidden on the left */
+    transform-origin: left;
+    transform: scaleX(0); 
+    
+    z-index: -1; 
+    border-radius: 50px; 
+}
+
+/* 2. Hover State: Triggers Fill and Glow */
+.longpartnership-priority-btn:hover::before {
+    transform: scaleX(1); /* Fills from left to right */
+}
+
+/* 3. Hover State: Final Appearance (Text color change + Glow) */
+.longpartnership-priority-btn:hover {
+    color: #ffffff !important; /* Text color changes to White for maximum contrast */
+    transform: translateY(-3px) scale(1.02); /* Slight lift and scale */
+    
+    /* Green Glow Border */
+    border-color: #8dc63f; /* Border color becomes green */
+    
+}
+
+
+/* --- Responsive Adjustments --- */
+
+@media (max-width: 992px) {
+    .longpartnership-pump-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .longpartnership-pump-details {
+        order: 1; /* Moves details above the pump image on smaller screens */
+    }
+    .longpartnership-pump-visuals {
+        order: 2;
+    }
+    .longpartnership-pump-headline {
+        font-size: 1.7rem;
+    }
+    .longpartnership-pump-benefits {
+        text-align: left;
+        max-width: 400px;
+        margin: 0 auto 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .longpartnership-main-content {
+        padding: 40px 3%;
+    }
+    .longpartnership-title {
+        font-size: 1.7rem;
+    }
+    .longpartnership-pump-section {
+        padding: 40px 20px;
+        gap: 25px;
+    }
+    .longpartnership-option-grid {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+    }
+}
+
+
+/* long partnership new css ends */
