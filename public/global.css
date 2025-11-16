@@ -6492,3 +6492,307 @@ padding-top: 10px;
 }
 
 /* privacy policy page css ends */
+
+
+
+
+
+
+/* Website update V2 Date: 16 nov 2025 onwards css */
+
+
+
+
+/* Products page css starts */
+
+.gblueproduct-main-content {
+    padding: 60px 5%;
+    max-width: 1300px;
+    margin: 0 auto;
+    font-family: 'Outfit', sans-serif;
+    margin-bottom: 7rem;
+}
+
+/* --- NEW HEADER STYLING: gblueproduct-page-header (Split-Bar Emphasis) --- */
+
+.gblueproduct-page-header {
+    /* Container: Sets the stage for the split background bars */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 30px 40px;
+    position: relative;
+    overflow: hidden; /* Ensures bars are clipped correctly */
+    background: #ffffff; /* Use white background */
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    z-index: 1; /* Ensures text is always on top */
+}
+
+/* === Title Bar Background (Blue) === */
+.gblueproduct-page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%; /* Covers the top half of the header */
+    background: #0054a6; /* Primary Blue */
+    z-index: 0;
+}
+
+/* === Subtitle Bar Accent (Green Diagonal) === */
+.gblueproduct-page-header::after {
+    content: '';
+    position: absolute;
+    bottom: -35px; /* Start below the subtitle area */
+    right: -250px;
+    width: 250px;
+    height: 250px;
+    background: #8dc63f; /* Accent Green */
+    transform: rotate(45deg); /* Diagonal angle */
+    /* opacity: 0.8; */
+    z-index: 0;
+    border-radius: 20px;
+}
+
+
+/* --- Title and Subtitle Styling (Positioned above the bars) --- */
+
+.gblueproduct-title {
+    /* Title: White text over the Blue background bar */
+    font-size: 2rem;
+    color: #ffffff; 
+    margin-bottom: 5px;
+    font-weight: 700;
+    position: relative;
+    z-index: 2; /* Ensures it sits above the ::before layer */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.gblueproduct-subtitle {
+    /* Subtitle: Dark text over the White background */
+    font-size: 1.2rem;
+    color: #1d1d1d; 
+    opacity: 0.9;
+    margin-top: 15px; /* Creates mandatory space below the title */
+    line-height: 1.4;
+    font-style: italic;
+    position: relative;
+    z-index: 2;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .gblueproduct-page-header {
+        padding: 25px 20px;
+    }
+    .gblueproduct-title {
+        font-size: 2.2rem;
+    }
+    .gblueproduct-subtitle {
+        font-size: 1rem;
+        padding-top: 15px;
+    }
+    .gblueproduct-page-header::before {
+        height: 50%; /* Shrink blue bar slightly */
+    }
+    .gblueproduct-page-header::after {
+        width: 150px;
+        height: 150px;
+    }
+
+    .gblueproduct-img2{
+        width: 200px !important;
+    }
+}
+
+.gblueproduct-section-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.gblueproduct-section-heading {
+    font-size: 2rem;
+    color: #0054a6; /* Primary Blue */
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+    
+    /* NEW: Setup for the underline */
+    position: relative;
+    display: inline-block; /* Allows us to center the heading and the line */
+    padding-bottom: 10px; /* Space between text and line */
+}
+
+.gblueproduct-section-heading::after {
+    content: '';
+    display: block;
+    width: 150px; /* Length of the short underline */
+    height: 3px;
+    background: #8dc63f; /* Accent Green color */
+    
+    /* Center the line relative to the text */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    
+    border-radius: 2px;
+}
+
+/* --- Product Item Cards (Photo + Details) --- */
+
+.gblueproduct-section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Space between individual item cards */
+}
+
+.gblueproduct-item-card {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 30px;
+    background: var(--gp-color-white);
+    border-radius: var(--gp-border-radius);
+    box-shadow: var(--gp-shadow);
+    transition: box-shadow 0.3s ease;
+}
+
+.gblueproduct-item-card:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.gblueproduct-img-container {
+    flex-shrink: 0; /* Prevents image area from shrinking */
+    width: 40%;
+    max-width: 450px;
+    /* Placeholder styles - replace with actual image handling */
+    height: 300px; 
+    background: var(--gp-color-background-light); 
+    border-radius: var(--gp-border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: italic;
+    color: #999;
+}
+.gblueproduct-img-container img {
+    width: 90%;
+    height: auto;
+    display: block;
+    border-radius: var(--gp-border-radius);
+}
+
+
+.gblueproduct-details {
+    width: 60%;
+}
+
+/* Reverse layout for alternating sections */
+.gblueproduct-card-reverse {
+    flex-direction: row-reverse;
+}
+.gblueproduct-card-reverse .gblueproduct-details {
+    text-align: right;
+}
+
+.gblueproduct-item-title {
+    font-size: 1.8rem;
+    color: #0054a6; 
+    margin-bottom: 15px;
+}
+
+.gblueproduct-item-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgb(68, 67, 67);
+    margin-bottom: 25px;
+}
+
+.gblueproduct-img2{
+    width: 250px;
+}
+
+.gblueproduct-read-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--gp-color-accent-green);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.gblueproduct-read-more:hover {
+    color: var(--gp-color-primary-blue);
+    transform: translateX(5px);
+}
+
+/* --- Specialty Card Adjustments (Marine) --- */
+
+.gblueproduct-marine {
+    background: #f0f8ff; /* Slightly different background for marine emphasis */
+    border: 1px solid #cceeff;
+}
+
+
+/* --- Responsive Adjustments --- */
+
+@media (max-width: 900px) {
+    .gblueproduct-item-card,
+    .gblueproduct-card-reverse {
+        flex-direction: column; /* Stack columns vertically */
+        text-align: left !important;
+    }
+    .gblueproduct-details,
+    .gblueproduct-img-container {
+        width: 100%;
+        max-width: none;
+    }
+    
+    .gblueproduct-img-container {
+        height: 250px; /* Reduce image placeholder height */
+    }
+
+    /* Reset text alignment for stacked layout */
+    .gblueproduct-card-reverse .gblueproduct-details {
+        text-align: left;
+    }
+
+    .gblueproduct-item-title {
+        text-align: center;
+        font-size: 1.6rem;
+    }
+    .gblueproduct-section-heading {
+        font-size: 1.6rem;
+    }
+    .gblueproduct-section-wrapper {
+        gap: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .gblueproduct-main-content {
+        padding: 30px 3%;
+    }
+    .gblueproduct-title {
+        font-size: 1.7rem;
+    }
+    .gblueproduct-img-container {
+        height: 200px;
+    }
+    .gblueproduct-item-card {
+        padding: 20px;
+    }
+    .gblueproduct-section {
+        gap: 0;
+    }
+}
+
+
+
+
