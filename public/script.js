@@ -418,3 +418,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 1500); // Start typing 1.5 seconds after container appears
     }
 });
+
+
+
+
+// Website update js date: 16 nov 2025 onwards
+

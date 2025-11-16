@@ -6794,5 +6794,577 @@ padding-top: 10px;
 }
 
 
+/* new products page css ends */
+
+/* index page new css starts  */
+
+/*New update css*/
+
+.home-product-showcase-container {
+    padding: 60px 20px;
+    background: var(--home-color-background-light);
+    text-align: center;
+}
+
+.home-headline h1 {
+    font-size: 2.25rem;
+    color: var(--color-primary-blue);
+    margin-bottom: 5px;
+}
+
+.home-headline p {
+    font-size: 1.1rem;
+    color: var(--home-color-text-dark);
+    margin-bottom: 40px;
+    opacity: 0.8;
+    /* === NEW UNDERLINE STYLES START === */
+    display: inline-block; /* Essential to center the pseudo-element */
+    position: relative; /* Context for the pseudo-element */
+    padding-bottom: 10px;
+    /* === NEW UNDERLINE STYLES END === */
+}
+
+.home-headline p::after {
+    /* === NEW UNDERLINE STYLES START === */
+    content: '';
+    display: block;
+    width: 200px; /* Adjust this width for desired length */
+    height: 3px; /* Thickness of the line */
+    background: #0054a6; /* Line color */
+    margin: 0 auto; /* Centers the line beneath the text */
+    border-radius: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    /* === NEW UNDERLINE STYLES END === */
+}
+
+.home-cta-note {
+    margin-top: 30px;
+    font-style: italic;
+    color: var(--home-color-accent-green);
+    font-weight: 600;
+}
+
+/* --- Carousel Wrapper (Enables 3D Context) --- */
+
+.home-carousel-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    perspective: 1200px; 
+}
+
+/* --- Product Card (Flip Element) --- */
+
+.home-product-card {
+    width: 250px;
+    height: 400px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform var(--home-transition-flip);
+    /* Changed cursor to help user know it's interactive */
+    cursor: default; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
 
 
+/* >>> CORE CHANGE: Flip on Hover <<< */
+.home-product-card:hover {
+    transform: rotateY(180deg);
+    /* Added subtle scale on hover for extra visual pop */
+    transform: rotateY(180deg) scale(1.03); 
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2), 0 0 15px var(--home-color-accent-green);
+    z-index: 10;
+}
+
+
+
+/* Common Card Face Styles */
+.home-card-front, .home-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: box-shadow var(--home-transition-fast);
+}
+
+/* Front Face */
+.home-card-front {
+    background: var(--home-color-off-white);
+    color: var(--home-color-text-dark);
+    z-index: 2;
+}
+
+.home-bucket-img {
+    /* max-height: 250px;
+    width: auto; */
+    max-width: 100%;
+  height: auto;
+    margin-bottom: 15px;
+    transition: transform var(--home-transition-fast);
+    border-radius: 15px;
+    transform: scale(1.1);
+}
+
+/* Little lift effect on image when hovering the card (but before flip) */
+.home-product-card:not(:hover) .home-bucket-img:hover { 
+    transform: translateY(-5px) scale(1.03);
+}
+
+.home-card-front h3 {
+    color: var(--home-color-primary-blue);
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.home-card-front p {
+    font-size: 0.95rem;
+    opacity: 0.7;
+}
+
+/* Back Face */
+.home-card-back {
+    background: linear-gradient(135deg, var(--home-color-primary-blue), var(--home-color-dark-hover));
+    color: var(--home-color-off-white);
+    transform: rotateY(180deg);
+    padding: 30px;
+}
+
+.home-card-back h4 {
+    font-size: 1.6rem;
+    color: #8dc63f;
+    margin-bottom: 10px;
+}
+
+.home-card-back p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+/* Bulk Card specific styling */
+.home-bulk-card {
+    background: var(--home-color-dark-hover);
+    color: var(--home-color-off-white);
+}
+
+.home-icon-large {
+    font-size: 5rem;
+    color: var(--home-color-accent-green);
+    margin-bottom: 10px;
+}
+
+/* Call to Action Button */
+.home-card-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--home-color-accent-green);
+    color: var(--home-color-dark-hover);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: var(--home-transition-fast);
+}
+
+.home-card-btn:hover {
+    background: var(--home-color-off-white);
+    transform: scale(1.05);
+}
+
+/* --- Responsive Adjustments --- */
+
+/* --- Responsive Adjustments --- */
+
+/* Tablet View (Max-width 1024px) */
+@media (max-width: 1024px) {
+    .home-product-showcase-container {
+        padding: 40px 15px;
+    }
+
+    .home-headline h1 {
+        font-size: 2rem;
+    }
+
+    .home-headline p {
+        font-size: 1rem;
+    }
+
+    /* Shrink the underline slightly */
+    .home-headline p::after {
+        width: 150px;
+    }
+
+    .home-carousel-wrapper {
+        gap: 20px;
+        /* Allow cards to wrap more closely */
+    }
+
+    .home-product-card {
+        width: 320px; 
+        height: 350px; 
+    }
+
+    .home-bucket-img {
+        transform: scale(1); /* Adjust starting scale */
+    }
+
+    .home-card-back h4 {
+        font-size: 1.4rem;
+    }
+}
+
+/* Mobile View (Max-width 768px and below) */
+@media (max-width: 768px) {
+    .home-product-showcase-container {
+        padding: 30px 10px;
+    }
+
+
+
+    .home-headline h1 {
+        font-size: 1.75rem;
+    }
+
+    .home-headline p {
+        font-size: 0.9rem;
+        padding-bottom: 8px; /* Reduce padding for smaller screen */
+    }
+
+    /* Shrink the underline further for mobile */
+    .home-headline p::after {
+        width: 100px;
+        height: 2px;
+    }
+
+    .home-cta-note {
+        margin-top: 20px;
+        font-size: 0.9rem;
+    }
+
+    .home-carousel-wrapper {
+        flex-direction: column; /* Stack cards vertically */
+        width: 80%; /* Or any specific width */
+  margin: 0 auto;
+        gap: 25px; /* Increase vertical gap */
+        perspective: 800px; /* Reduce perspective for smaller screens */
+    }
+
+    .home-product-card {
+        width: 90%; /* Take up most of the screen width */
+        max-width: 450px; /* Cap size for very wide phones */
+        height: 300px; /* Reduce card height */
+        
+        /* Disable hover flip on touch devices for better usability */
+        /* If using touch, this ensures the flip is easily viewed. */
+        transform: rotateY(0deg) !important;
+        
+        /* Simple press-down effect for mobile interaction */
+        transition: transform 0.2s ease-out, box-shadow var(--home-transition-fast);
+        
+        /* Reset hover effects for mobile */
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Important: Disable the flip on mobile/tablet hover */
+    .home-product-card:hover {
+        transform: scale(1.05); /* Just scale on hover */
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2), 0 0 15px var(--home-color-accent-green);
+        z-index: 1;
+    }
+    
+    /* To display the back content on mobile, you might need a JS toggle,
+       but for pure CSS responsiveness, we keep the front visible. */
+
+
+    .home-bucket-img {
+        max-height: 120px; /* Smaller images */
+        margin-bottom: 10px;
+        transform: scale(1);
+    }
+    
+    .home-card-front h3 {
+        font-size: 1.1rem;
+    }
+    
+
+    
+
+    .home-card-back h4 {
+        font-size: 1.2rem;
+    }
+
+    .home-card-back p {
+        font-size: 0.9rem;
+    }
+    
+    .home-icon-large {
+        font-size: 4rem;
+    }
+}
+
+
+/* --- Video Section Styles --- */
+
+.home-video-section {
+    /* Base style for the section using your existing feature layout */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+    gap: 100px; 
+    background: var(--home-color-background-light);
+}
+
+.home-video-container {
+    max-width: 650px;
+    width: 100%;
+    position: relative; /* For positioning controls */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.home-video-container:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.home-product-video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.home-video-controls {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.home-control-btn {
+    background: rgba(0, 84, 166, 0.8); /* Dark blue, semi-transparent */
+    color: var(--color-white);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.1s ease;
+    backdrop-filter: blur(3px);
+}
+
+.home-control-btn:hover {
+    background: var(--color-accent-green);
+    transform: scale(1.05);
+}
+
+/* Styles for Content Container (kept from previous steps) */
+.home-content-container {
+    max-width: 500px;
+}
+
+.home-content-container h2 {
+    color: var(--color-primary-blue);
+    margin-bottom: 15px;
+    font-size: 2.2rem;
+    border-bottom: 3px solid var(--color-accent-green);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.home-highlight {
+    color: var(--color-accent-green);
+}
+
+/* --- Responsive Adjustments for Video Section --- */
+
+@media (max-width: 768px) {
+    .home-video-section {
+        flex-direction: column;
+        gap: 30px;
+        padding: 40px 15px;
+    }
+    .home-video-container {
+        max-width: 100%;
+        order: 1; /* Video on top */
+    }
+    .home-content-container {
+        order: 2; /* Text below video */
+    }
+}
+
+/* --- Dispenser Section Specific Styles (New Unique Classes) --- */
+
+.home-dispenser-feature-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+    gap: 100px; 
+    background: var(--home-color-background-light) !important;
+    flex-direction: row-reverse; /* Puts the video on the right for variety */
+}
+
+.home-dispenser-content {
+    max-width: 500px;
+    text-align: left;
+}
+
+.home-dispenser-title {
+    color: var(--color-dark-navy-outline);
+    margin-bottom: 15px;
+    font-size: 2.2rem;
+    display: inline-block;
+    padding-bottom: 5px;
+    position: relative;
+    border-bottom: 3px solid var(--color-accent-green);
+}
+
+.home-dispenser-title .home-dispenser-highlight {
+    font-size: 1.6rem; 
+    vertical-align: middle;
+    /* margin-left: 10px; */
+    color: var(--color-accent-green);
+}
+
+.home-dispenser-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: var(--color-text-main);
+}
+
+.home-dispenser-content .home-dispenser-small-text {
+    font-size: 0.95rem;
+    opacity: 0.8;
+    margin-top: -5px; 
+}
+
+/* --- Video Wrapper Styles --- */
+
+.home-dispenser-video-wrapper {
+    max-width: 700px;
+    width: 100%;
+    position: relative; 
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 124, 240, 0.277);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.home-dispenser-video-wrapper:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.home-dispenser-video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- Badge & Overlay Styles --- */
+
+.home-dispenser-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--color-accent-green);
+    color: var(--color-white);
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    z-index: 10;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.home-dispenser-play-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.4); 
+    z-index: 5; 
+    pointer-events: none; 
+    opacity: 1; 
+    transition: opacity 0.3s ease;
+}
+
+.home-dispenser-play-overlay i {
+    font-size: 3rem;
+    color: var(--color-white);
+    padding: 15px;
+    border: 3px solid var(--color-white);
+    border-radius: 50%;
+    background: rgba(0, 84, 166, 0.6); 
+}
+
+/* --- Responsive Adjustments --- */
+
+@media (max-width: 768px) {
+    .home-dispenser-feature-section {
+        flex-direction: column; /* Stack vertically on mobile */
+        gap: 30px;
+        padding: 40px 15px;
+    }
+    .home-dispenser-content {
+        order: 2; /* Text below video */
+        text-align: center; /* Center text on mobile */
+    }
+    .home-dispenser-title {
+        font-size: 1.6rem;
+        padding-bottom: 0; 
+        border-bottom: none; 
+    }
+    .home-dispenser-title .home-dispenser-highlight {
+        display: block; /* Force "Coming Soon!" to new line */
+        font-size: 1.1rem;
+        margin-left: 0;
+        margin-top: 5px;
+    }
+
+    .home-dispenser-content p{
+        font-size: 1rem;
+    }
+    .home-dispenser-video-wrapper {
+        order: 1; /* Video on top */
+        max-width: 100%;
+    }
+    .home-dispenser-badge {
+        top: 10px;
+        right: 10px;
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+}
+
+
+/* index page new css ends */
